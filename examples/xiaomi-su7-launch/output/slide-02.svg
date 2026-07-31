@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="70%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#2a1508"/>
+    </linearGradient>
+    <linearGradient id="orangeGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6900"/>
+      <stop offset="100%" stop-color="#FF9F43"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="#0a0a0a"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  
+  <rect x="56" y="36" width="36" height="36" rx="8" ry="8" fill="#FF6900" stroke="none"/>
+  <text x="74" y="60" fill="#ffffff" font-size="14" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">Mi</text>
+
+  <text x="56" y="110" fill="#ffffff" font-size="32" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">为什么是 SU7</text>
+  <text x="56" y="150" fill="#a3a3a3" font-size="15" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">研发目标：做 50 万以内最好看、最好开、最智能的高品质轿车</text>
+
+  <rect x="56" y="200" width="380" height="380" rx="16" ry="16" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="56" y="200" width="380" height="8" rx="0" ry="0" fill="#FF6900" stroke="none"/>
+  <text x="84" y="280" fill="#FF6900" font-size="36" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">好看</text>
+  <text x="84" y="340" fill="#ffffff" font-size="18" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">轿跑比例与精致工艺</text>
+  <text x="84" y="400" fill="#a3a3a3" font-size="14" font-weight="400" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="84" dy="0">挑战「50万以内最好看」</tspan>
+</text>
+
+  <rect x="456" y="200" width="380" height="380" rx="16" ry="16" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="456" y="200" width="380" height="8" rx="0" ry="0" fill="#FF6900" stroke="none"/>
+  <text x="484" y="280" fill="#FF6900" font-size="36" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">好开</text>
+  <text x="484" y="340" fill="#ffffff" font-size="18" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">性能底盘与驾驶乐趣</text>
+  <text x="484" y="400" fill="#a3a3a3" font-size="14" font-weight="400" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="484" dy="0">Max 零百 2.78s 级体验</tspan>
+</text>
+
+  <rect x="856" y="200" width="380" height="380" rx="16" ry="16" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="856" y="200" width="380" height="8" rx="0" ry="0" fill="#FF6900" stroke="none"/>
+  <text x="884" y="280" fill="#FF6900" font-size="36" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">智能</text>
+  <text x="884" y="340" fill="#ffffff" font-size="18" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">HyperOS + 全栈智驾</text>
+  <text x="884" y="400" fill="#a3a3a3" font-size="14" font-weight="400" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="884" dy="0">人车家生态无缝连接</tspan>
+</text>
+
+  <text x="56" y="692" fill="#a3a3a3" font-size="12" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">小米SU7发布会</text>
+  <text x="1224" y="692" fill="#a3a3a3" font-size="12" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">02 / 12</text>
+
+</svg>

@@ -1,0 +1,64 @@
+# brand + tech 合并样式（小米 SU7）
+# brand.primary → accent；brand.secondary → primary
+
+name: Xiaomi SU7 Tech
+mood: Sleek, forward-looking, innovative. Dark canvas with Xiaomi orange accents.
+
+color_scheme:
+  primary: "#000000"
+  secondary: "#1a1a1a"
+  accent: "#FF6900"
+  background: "#0a0a0a"
+  text: "#f5f5f5"
+  card_bg: "#141414"
+  muted: "#a3a3a3"
+  border: "#2a2a2a"
+  chart_colors:
+    - "#FF6900"
+    - "#FF9F43"
+    - "#34d399"
+    - "#38bdf8"
+    - "#f472b6"
+    - "#a3a3a3"
+    - "#ffffff"
+    - "#525252"
+
+typography:
+  heading_font: "Geist Sans, Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif"
+  body_font: "Geist Sans, Inter, 'PingFang SC', 'Microsoft YaHei', sans-serif"
+  cjk_font: "'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
+  scale: 1.0
+
+card_style:
+  border_radius: 16
+  shadow: "0 4px 12px rgba(0,0,0,0.3)"
+  gap: 20
+
+gradients:
+  hero_bg: "linear-gradient(135deg, #000000 0%, #1a1a1a 55%, #2a1508 100%)"
+  card_highlight: "linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)"
+
+elevation:
+  shadow_sm: "0 1px 3px rgba(0,0,0,0.2)"
+  shadow_md: "0 4px 12px rgba(0,0,0,0.3)"
+  shadow_lg: "0 12px 40px rgba(0,0,0,0.4)"
+
+decoration:
+  pattern: "grid"
+  pattern_opacity: 0.04
+  icon_style: "outline"
+  icon_weight: 1.5
+
+brand:
+  logo_text: "Mi"
+  primary: "#FF6900"
+  secondary: "#000000"
+
+slide_type_overrides:
+  cover:
+    card_bg: "#000000"
+    text: "#ffffff"
+    heading_scale: 1.3
+  section_divider:
+    background: "#000000"
+    text: "#ffffff"

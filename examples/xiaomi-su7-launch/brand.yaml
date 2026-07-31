@@ -1,0 +1,4 @@
+brand:
+  primary: "#FF6900"     # 小米品牌橙
+  secondary: "#000000"   # 辅助黑
+  logo_text: "Mi"        # 品牌标识

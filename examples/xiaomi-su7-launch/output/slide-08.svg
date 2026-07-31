@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="70%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#2a1508"/>
+    </linearGradient>
+    <linearGradient id="orangeGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6900"/>
+      <stop offset="100%" stop-color="#FF9F43"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="#0a0a0a"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  
+  <rect x="56" y="36" width="36" height="36" rx="8" ry="8" fill="#FF6900" stroke="none"/>
+  <text x="74" y="60" fill="#ffffff" font-size="14" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">Mi</text>
+
+  <text x="56" y="110" fill="#ffffff" font-size="32" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">小米智能驾驶</text>
+  <text x="56" y="150" fill="#a3a3a3" font-size="14" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">全栈自研 · 全系标配辅助驾驶能力</text>
+  <rect x="56" y="190" width="570" height="420" rx="16" ry="16" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="84" y="250" fill="#FF6900" font-size="28" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">Pilot Pro</text>
+  <text x="84" y="300" fill="#a3a3a3" font-size="14" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">标准版</text>
+  <text x="84" y="360" fill="#a3a3a3" font-size="16" font-weight="400" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="84" dy="0">单 Orin · 84 TOPS</tspan>
+<tspan x="84" dy="27">多摄像头 + 毫米波 + 超声波</tspan>
+<tspan x="84" dy="27">高速领航 / 智能泊车等</tspan>
+<tspan x="84" dy="27">智驾增强权益（限时口径）</tspan>
+</text>
+  <rect x="654" y="190" width="570" height="420" rx="16" ry="16" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="654" y="190" width="570" height="8" rx="0" ry="0" fill="#FF6900" stroke="none"/>
+  <text x="682" y="250" fill="#FF6900" font-size="28" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">Pilot Max</text>
+  <text x="682" y="300" fill="#a3a3a3" font-size="14" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">Pro / Max</text>
+  <text x="682" y="360" fill="#a3a3a3" font-size="16" font-weight="400" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="682" dy="0">双 Orin · 508 TOPS</tspan>
+<tspan x="682" dy="27">激光雷达加持</tspan>
+<tspan x="682" dy="27">城市领航能力规划开通</tspan>
+<tspan x="682" dy="27">更高阶感知与决策冗余</tspan>
+</text>
+
+  <text x="56" y="692" fill="#a3a3a3" font-size="12" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">小米SU7发布会</text>
+  <text x="1224" y="692" fill="#a3a3a3" font-size="12" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">08 / 12</text>
+
+</svg>
