@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <pattern id="bp" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0F766E" stroke-width="0.4" opacity="0.07"/>
+    </pattern>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#F1F5F9"/>
+  <rect width="1280" height="720" fill="url(#bp)"/>
+
+  <rect x="0" y="0" width="1280" height="72" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="48" y="42" fill="#94A3B8" font-size="18" font-weight="500" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">五大体系</text>
+  <text x="48" y="66" fill="#14B8A6" font-size="16" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">价值生产力体系：以精益锚定核心课题、助力价值增长</text>
+  <text x="1180" y="46" fill="#14B8A6" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">04 / 06</text>
+
+  <rect x="40" y="100" width="340" height="450" rx="4" ry="4" fill="url(#inkGrad)" stroke="none"/>
+  <text x="68" y="160" fill="#14B8A6" font-size="40" font-weight="800" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">05</text>
+  <text x="68" y="220" fill="#fff" font-size="24" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">聚焦五大</text>
+  <text x="68" y="258" fill="#fff" font-size="24" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">核心课题</text>
+  <text x="68" y="300" fill="#94A3B8" font-size="14" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">突破生产瓶颈</text>
+  <text x="68" y="360" fill="#CBD5E1" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="68" dy="0">推动精益改善转化为产能增量、</tspan>
+<tspan x="68" dy="17">良率增量、效益增量，打造「第二生产</tspan>
+<tspan x="68" dy="17">力」引擎。</tspan>
+</text>
+
+  <rect x="400" y="100" width="840" height="80" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="400" y="100" width="6" height="80" rx="0" ry="0" fill="#0F766E" stroke="none"/>
+  <text x="430" y="132" fill="#0F172A" font-size="16" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">01  拉晶硅损优化</text>
+  <text x="430" y="158" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">厘清硅损价值链浪费点；降低切割与磨削余量；提升硅料来源利用效率。</text>
+
+  <rect x="400" y="190" width="840" height="80" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="400" y="190" width="6" height="80" rx="0" ry="0" fill="#0F766E" stroke="none"/>
+  <text x="430" y="222" fill="#0F172A" font-size="16" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">02  切片损耗管控</text>
+  <text x="430" y="248" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">攻克断线、碎片难点；提升硅片切割良率与优品率。</text>
+
+  <rect x="400" y="280" width="840" height="80" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="400" y="280" width="6" height="80" rx="0" ry="0" fill="#0F766E" stroke="none"/>
+  <text x="430" y="312" fill="#0F172A" font-size="16" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">03  组件质量攻坚</text>
+  <text x="430" y="338" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">管控层压缺陷、隐裂、虚焊及电池片碎片率；保障产品可靠性与寿命。</text>
+
+  <rect x="400" y="370" width="840" height="80" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="400" y="370" width="6" height="80" rx="0" ry="0" fill="#0F766E" stroke="none"/>
+  <text x="430" y="402" fill="#0F172A" font-size="16" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">04  设备效能跃升</text>
+  <text x="430" y="428" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">全面夯实 TPM 运行模式；提升 OEE 指标；保障设备与产线连续稳定运行。</text>
+
+  <rect x="400" y="460" width="840" height="80" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="400" y="460" width="6" height="80" rx="0" ry="0" fill="#0F766E" stroke="none"/>
+  <text x="430" y="492" fill="#0F172A" font-size="16" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">05  精益数字化+</text>
+  <text x="430" y="518" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">以标准化为基础，全局拉通顶层数字化模型；整合 DMS、TPMS、QMS 等系统。</text>
+
+  <rect x="40" y="575" width="1200" height="105" rx="4" ry="4" fill="#CCFBF1" stroke="#0F766E" stroke-width="1"/>
+  <text x="68" y="615" fill="#0F766E" font-size="15" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">实现管理与产能双增长</text>
+  <text x="68" y="645" fill="#0F172A" font-size="12" font-weight="500" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="68" dy="0">推动精益改善转化为实实在在的 产能增量、良率增量、效益增量，打造支撑公司业务规模化、高质量发展的「第二生产力」引擎</tspan>
+</text>
+
+</svg>
