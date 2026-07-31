@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="70%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#2a1508"/>
+    </linearGradient>
+    <linearGradient id="orangeGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6900"/>
+      <stop offset="100%" stop-color="#FF9F43"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="#0a0a0a"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  
+  <rect x="56" y="36" width="36" height="36" rx="8" ry="8" fill="#FF6900" stroke="none"/>
+  <text x="74" y="60" fill="#ffffff" font-size="14" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">Mi</text>
+
+  <text x="56" y="110" fill="#ffffff" font-size="32" font-weight="800" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">设计美学</text>
+  <text x="56" y="150" fill="#a3a3a3" font-size="14" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">中大型轿跑姿态 · 九色矩阵 · 精致细节</text>
+  <rect x="56" y="190" width="560" height="420" rx="16" ry="16" fill="#141414" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="84" y="250" fill="#ffffff" font-size="22" font-weight="700" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">4997 × 1963 × 1455 mm</text>
+  <text x="84" y="300" fill="#FF6900" font-size="18" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">轴距 3000 mm</text>
+  <text x="84" y="360" fill="#a3a3a3" font-size="14" font-weight="400" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="84" dy="0">流畅轿跑轮廓，兼顾气场与日常实用性。金属漆可选，</tspan>
+<tspan x="84" dy="20">创始版限量发售。</tspan>
+</text>
+  <text x="84" y="480" fill="#a3a3a3" font-size="14" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">设计主张</text>
+  <text x="84" y="520" fill="#ffffff" font-size="22" font-weight="700" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">好看，是第一生产力</text>
+  <text x="660" y="220" fill="#FF6900" font-size="16" font-weight="700" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">九色可选</text>
+
+  <rect x="660" y="260" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="700" cy="305" r="18" fill="#FF6900" stroke="#444" stroke-width="1"/>
+  <text x="730" y="310" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">熔岩橙</text>
+
+  <rect x="840" y="260" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="880" cy="305" r="18" fill="#3B82F6" stroke="#444" stroke-width="1"/>
+  <text x="910" y="310" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">海湾蓝</text>
+
+  <rect x="1020" y="260" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="1060" cy="305" r="18" fill="#6B8E23" stroke="#444" stroke-width="1"/>
+  <text x="1090" y="310" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">橄榄绿</text>
+
+  <rect x="660" y="370" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="700" cy="415" r="18" fill="#F5F5F0" stroke="#444" stroke-width="1"/>
+  <text x="730" y="420" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">珍珠白</text>
+
+  <rect x="840" y="370" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="880" cy="415" r="18" fill="#222" stroke="#444" stroke-width="1"/>
+  <text x="910" y="420" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">钻石黑</text>
+
+  <rect x="1020" y="370" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="1060" cy="415" r="18" fill="#60A5FA" stroke="#444" stroke-width="1"/>
+  <text x="1090" y="420" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">流行蓝</text>
+
+  <rect x="660" y="480" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="700" cy="525" r="18" fill="#A78BFA" stroke="#444" stroke-width="1"/>
+  <text x="730" y="530" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">霞光紫</text>
+
+  <rect x="840" y="480" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="880" cy="525" r="18" fill="#6B7280" stroke="#444" stroke-width="1"/>
+  <text x="910" y="530" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">寒武岩灰</text>
+
+  <rect x="1020" y="480" width="160" height="90" rx="12" ry="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="1060" cy="525" r="18" fill="#9CA3AF" stroke="#444" stroke-width="1"/>
+  <text x="1090" y="530" fill="#ffffff" font-size="13" font-weight="600" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">雅灰</text>
+
+  <text x="56" y="692" fill="#a3a3a3" font-size="12" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">小米SU7发布会</text>
+  <text x="1224" y="692" fill="#a3a3a3" font-size="12" font-weight="500" font-family="Geist Sans, Inter, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">04 / 12</text>
+
+</svg>
