@@ -1,17 +1,36 @@
 {
   "title": "GPS精益｜筑基→势起",
   "approved": true,
-  "style": "business-navy-amber",
   "pages": [
-    {"index": 1, "title": "封面 — 筑基→势起", "type": "cover"},
-    {"index": 2, "title": "当前精益推进现存真实痛点", "type": "content"},
-    {"index": 3, "title": "453 总框架", "type": "content"},
-    {"index": 4, "title": "四级联动架构", "type": "content"},
-    {"index": 5, "title": "五大体系总览", "type": "content"},
-    {"index": 6, "title": "体系详解 01–04", "type": "content"},
-    {"index": 7, "title": "价值生产力体系", "type": "content"},
-    {"index": 8, "title": "三阶段路径", "type": "content"},
-    {"index": 9, "title": "真善美底层逻辑", "type": "content"},
-    {"index": 10, "title": "下一步", "type": "end"}
+    {
+      "index": 1,
+      "title": "当前精益推进现存真实痛点",
+      "file": "slide-01.svg"
+    },
+    {
+      "index": 2,
+      "title": "筑基→势起｜453总框架",
+      "file": "slide-02.svg"
+    },
+    {
+      "index": 3,
+      "title": "五大体系｜01–04",
+      "file": "slide-03.svg"
+    },
+    {
+      "index": 4,
+      "title": "价值生产力体系｜五大核心课题",
+      "file": "slide-04.svg"
+    },
+    {
+      "index": 5,
+      "title": "三个阶段",
+      "file": "slide-05.svg"
+    },
+    {
+      "index": 6,
+      "title": "真善美底层逻辑",
+      "file": "slide-06.svg"
+    }
   ]
 }
