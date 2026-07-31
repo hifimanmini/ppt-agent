@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""向总汇报 6 页重建 — 内容与用户提供的 6 张原稿截图一一对应。"""
+"""向总汇报 6 页 — 模板 B：精密青石灰（内容不变，视觉全换）。"""
 
 from __future__ import annotations
 
@@ -18,20 +18,22 @@ ROOT = Path(__file__).resolve().parent
 SLIDES_DIR = ROOT / "slides"
 OUT_DIR = ROOT / "output"
 
-# 贴近原稿：白底 + 橙色强调 + 深蓝标题（避免紫/奶油陶土/报章风）
-NAVY = "#1B3A5F"
-NAVY_DEEP = "#0F2740"
-ORANGE = "#E87A2E"
-ORANGE_SOFT = "#FFF4EB"
-ORANGE_LINE = "#F0C9A8"
-BG = "#FFFFFF"
-CARD = "#FFFFFF"
-TEXT = "#2C3E50"
-MUTED = "#5D6D7E"
-LINE = "#E8EEF2"
-SOFT_BG = "#F7F9FB"
+# ── Template B: Precision Slate-Teal（区别于上一套橙白商务）──
+INK = "#0F172A"
+INK2 = "#1E293B"
+TEAL = "#0F766E"
+TEAL_SOFT = "#CCFBF1"
+TEAL_MID = "#14B8A6"
+BG = "#F1F5F9"
+PAPER = "#FFFFFF"
+TEXT = "#0F172A"
+MUTED = "#64748B"
+LINE = "#CBD5E1"
+RULE = "#94A3B8"
 
-FONT = "Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif"
+# 标题用衬线感栈，正文无衬线 — 形成与旧模板不同的气质
+HEAD = "Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif"
+BODY = "Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif"
 
 
 def esc(s: str) -> str:
@@ -57,31 +59,34 @@ def svg_wrap(body: str, bg: str = BG) -> str:
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="{NAVY_DEEP}"/>
-      <stop offset="100%" stop-color="{NAVY}"/>
+    <pattern id="bp" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="{TEAL}" stroke-width="0.4" opacity="0.07"/>
+    </pattern>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="{INK}"/>
+      <stop offset="100%" stop-color="{INK2}"/>
     </linearGradient>
-    <filter id="sh" x="-4%" y="-4%" width="108%" height="116%">
-      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1B3A5F" flood-opacity="0.08"/>
-    </filter>
   </defs>
   <rect width="1280" height="720" fill="{bg}"/>
+  <rect width="1280" height="720" fill="url(#bp)"/>
 {body}
 </svg>
 '''
 
 
-def T(x, y, content, size=16, fill=TEXT, weight=500, anchor="start"):
+def T(x, y, content, size=16, fill=TEXT, weight=500, anchor="start", font=None):
+    fam = font or BODY
     return (
         f'<text x="{x}" y="{y}" fill="{fill}" font-size="{size}" font-weight="{weight}" '
-        f'font-family="{FONT}" text-anchor="{anchor}">{esc(content)}</text>'
+        f'font-family="{fam}" text-anchor="{anchor}">{esc(content)}</text>'
     )
 
 
-def TB(x, y, lines, size=13, fill=TEXT, weight=400, lh=1.45):
+def TB(x, y, lines, size=13, fill=TEXT, weight=400, lh=1.45, font=None):
+    fam = font or BODY
     parts = [
         f'<text x="{x}" y="{y}" fill="{fill}" font-size="{size}" font-weight="{weight}" '
-        f'font-family="{FONT}">'
+        f'font-family="{fam}">'
     ]
     for i, line in enumerate(lines):
         dy = 0 if i == 0 else int(size * lh)
@@ -90,13 +95,23 @@ def TB(x, y, lines, size=13, fill=TEXT, weight=400, lh=1.45):
     return "\n".join(parts)
 
 
-def R(x, y, w, h, fill=CARD, stroke=None, r=12, shadow=False):
-    s = f' stroke="{stroke}" stroke-width="1.5"' if stroke else ' stroke="none"'
-    f = ' filter="url(#sh)"' if shadow else ""
-    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" ry="{r}" fill="{fill}"{s}{f}/>'
+def R(x, y, w, h, fill=PAPER, stroke=None, r=4):
+    s = f' stroke="{stroke}" stroke-width="1"' if stroke else ' stroke="none"'
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" ry="{r}" fill="{fill}"{s}/>'
 
 
-# ───────────────── Slide 1: 痛点（对应图1） ─────────────────
+def rule(x, y, w, color=TEAL):
+    return f'<rect x="{x}" y="{y}" width="{w}" height="2" fill="{color}"/>'
+
+
+def num_badge(x, y, num):
+    return f'''
+  <circle cx="{x}" cy="{y}" r="18" fill="{TEAL}"/>
+  {T(x, y + 5, num, 13, "#fff", 700, "middle")}
+'''
+
+
+# ───────────────── Slide 1: 痛点 ─────────────────
 
 def slide_01():
     pains = [
@@ -111,51 +126,45 @@ def slide_01():
         ("05", "精益信息化缺失，改善难沉淀",
          "改善经验难沉淀、难复制，数据与现场脱节，缺少统一数字化看板与闭环系统，难以支撑精益从「运动式」走向「常态化」。"),
     ]
-    # 左列 01-03，右列 04-05 + 总结
-    left = pains[:3]
-    right = pains[3:]
     body = f'''
-  {T(56, 52, "当前精益推进现存真实痛点", 30, NAVY, 800)}
-  {R(56, 64, 80, 4, ORANGE, r=2)}
+  {R(0, 0, 1280, 72, INK, r=0)}
+  {T(48, 46, "当前精益推进现存真实痛点", 26, "#fff", 700, font=HEAD)}
+  {T(1180, 46, "01 / 06", 12, TEAL_MID, 600, "end")}
 '''
-    for i, (num, title, desc) in enumerate(left):
-        y = 95 + i * 195
+    for i, (num, title, desc) in enumerate(pains):
+        col, row = (0, i) if i < 3 else (1, i - 3)
+        x = 40 + col * 620
+        y = 100 + row * 165
         body += f'''
-  {R(56, y, 580, 175, CARD, ORANGE_LINE, shadow=True)}
-  {R(56, y, 8, 175, ORANGE, r=0)}
-  {T(84, y + 38, num, 22, ORANGE, 800)}
-  {T(84, y + 72, title, 17, NAVY, 700)}
-  {TB(84, y + 102, wrap(desc, 30), 13, MUTED, 400, 1.45)}
-'''
-    for i, (num, title, desc) in enumerate(right):
-        y = 95 + i * 195
-        body += f'''
-  {R(660, y, 560, 175, CARD, ORANGE_LINE, shadow=True)}
-  {R(660, y, 8, 175, ORANGE, r=0)}
-  {T(688, y + 38, num, 22, ORANGE, 800)}
-  {T(688, y + 72, title, 17, NAVY, 700)}
-  {TB(688, y + 102, wrap(desc, 28), 13, MUTED, 400, 1.45)}
+  {R(x, y, 600, 148, PAPER, LINE, r=4)}
+  {rule(x, y, 600, TEAL)}
+  {num_badge(x + 36, y + 36, num)}
+  {T(x + 68, y + 42, title, 15, INK, 700)}
+  {TB(x + 24, y + 72, wrap(desc, 30), 12, MUTED, 400, 1.4)}
 '''
     body += f'''
-  {R(660, 485, 560, 175, SOFT_BG, ORANGE_LINE, shadow=True)}
-  {TB(688, 525, wrap("精益生产本质是消除浪费与持续改善；实践中仍面临从表层整改到深层次攻坚的多重执行挑战。", 28), 13, TEXT, 500, 1.45)}
-  {TB(688, 595, wrap("闭环机制与数据沉淀是精益从「运动式」走向「常态化」的关键，破除形式主义、回归价值创造。", 28), 13, MUTED, 400, 1.45)}
+  {R(660, 430, 580, 230, INK, r=4)}
+  {T(688, 475, "关键判断", 14, TEAL_MID, 700)}
+  {TB(688, 515, wrap("精益生产本质是消除浪费与持续改善；实践中仍面临从表层整改到深层次攻坚的多重执行挑战。", 28), 13, "#E2E8F0", 400, 1.45)}
+  {TB(688, 595, wrap("闭环机制与数据沉淀是精益从「运动式」走向「常态化」的关键，破除形式主义、回归价值创造。", 28), 13, "#94A3B8", 400, 1.45)}
 '''
     return svg_wrap(body)
 
 
-# ───────────────── Slide 2: 筑基→势起（对应图2） ─────────────────
+# ───────────────── Slide 2: 筑基→势起 ─────────────────
 
 def slide_02():
     body = f'''
-  {T(56, 42, "筑基 →「势起」", 28, NAVY, 800)}
-  {R(56, 52, 64, 4, ORANGE, r=2)}
-  {TB(56, 82, [
+  {R(0, 0, 1280, 72, INK, r=0)}
+  {T(48, 46, "筑基 →「势起」", 26, "#fff", 700, font=HEAD)}
+  {T(1180, 46, "02 / 06", 12, TEAL_MID, 600, "end")}
+  {TB(48, 100, [
       "自 2025 年 9 月以来，GPS 精益体系已从「探索与单点整改」迈入「体系起势与机制落地」阶段。",
       "2026 年为关键推进年：精益作为「第二生产力」，以「453」框架启航精益转型，践行「真善美」价值主张。"
   ], 13, MUTED, 400, 1.4)}
 
-  {T(56, 145, "四级架构", 15, ORANGE, 700)}
+  {T(48, 165, "四级架构", 13, TEAL, 700)}
+  {rule(48, 175, 48)}
 '''
     levels = [
         ("决策层 · 战略引领", "确立精益战略，审批重大课题，提供核心资源与政策支持"),
@@ -164,15 +173,17 @@ def slide_02():
         ("落地层 · 现场改善", "班组长带一线严守 SOP，参与现场改善提案"),
     ]
     for i, (t, d) in enumerate(levels):
-        x = 56 + i * 305
+        x = 48 + i * 305
         body += f'''
-  {R(x, 160, 290, 100, CARD, LINE, shadow=True)}
-  {R(x, 160, 290, 34, NAVY, r=12)}
-  <rect x="{x}" y="182" width="290" height="12" fill="{NAVY}"/>
-  {T(x + 145, 182, t, 13, "#fff", 700, "middle")}
-  {TB(x + 14, 214, wrap(d, 14), 12, MUTED, 400, 1.35)}
+  {R(x, 190, 290, 105, PAPER, LINE, r=4)}
+  {R(x, 190, 290, 6, TEAL if i == 0 else INK, r=0)}
+  {T(x + 14, 225, t, 13, INK, 700)}
+  {TB(x + 14, 250, wrap(d, 14), 11, MUTED, 400, 1.35)}
 '''
-    body += f'  {T(56, 290, "五大体系", 15, ORANGE, 700)}\n'
+    body += f'''
+  {T(48, 325, "五大体系", 13, TEAL, 700)}
+  {rule(48, 335, 48)}
+'''
     systems = [
         ("01 对标研学", "被动学习 → 主动对标"),
         ("02 标杆复制", "单点优势 → 全域标准化"),
@@ -181,34 +192,37 @@ def slide_02():
         ("05 价值生产力", "精益锚定核心课题"),
     ]
     for i, (t, d) in enumerate(systems):
-        x = 56 + i * 244
+        x = 48 + i * 242
         body += f'''
-  {R(x, 305, 230, 78, ORANGE_SOFT if i == 4 else CARD, ORANGE if i == 4 else LINE, shadow=True)}
-  {T(x + 16, 335, t, 14, NAVY, 700)}
-  {T(x + 16, 360, d, 12, MUTED, 400)}
+  {R(x, 350, 228, 72, TEAL_SOFT if i == 4 else PAPER, TEAL if i == 4 else LINE, r=4)}
+  {T(x + 14, 378, t, 13, INK, 700)}
+  {T(x + 14, 402, d, 11, MUTED, 400)}
 '''
-    body += f'  {T(56, 415, "三阶段路径（2026 下半年）", 15, ORANGE, 700)}\n'
+    body += f'''
+  {T(48, 450, "三阶段路径（2026 下半年）", 13, TEAL, 700)}
+  {rule(48, 460, 48)}
+'''
     phases = [
         ("7–8 月 · 筑基巩固期", "补短板、定标准、全员培训，夯实现场基础管理规范化"),
         ("9–10 月 · 攻坚突破期", "专项改善课题，解决核心经营痛点与瓶颈"),
         ("11–12 月 · 价值兑现期", "固化成果、建立长效机制，验证经济效益与效率提升"),
     ]
     for i, (t, d) in enumerate(phases):
-        x = 56 + i * 405
+        x = 48 + i * 405
         body += f'''
-  {R(x, 430, 390, 110, CARD, LINE, shadow=True)}
-  {T(x + 18, 465, t, 15, NAVY, 700)}
-  {TB(x + 18, 495, wrap(d, 20), 12, MUTED, 400, 1.4)}
+  {R(x, 475, 390, 95, PAPER, LINE, r=4)}
+  {T(x + 16, 508, t, 14, INK, 700)}
+  {TB(x + 16, 535, wrap(d, 20), 11, MUTED, 400, 1.35)}
 '''
     body += f'''
-  {R(56, 560, 1168, 110, NAVY_DEEP, r=14)}
-  {T(84, 605, "453 框架 = 四级架构 × 五大体系 × 三阶段路径", 18, ORANGE, 700)}
-  {T(84, 640, "以体系起势驱动机制落地，打造支撑公司高质量发展的「第二生产力」", 14, "#A8C5D4", 400)}
+  {R(48, 595, 1184, 90, INK, r=4)}
+  {T(72, 635, "453 框架 = 四级架构 × 五大体系 × 三阶段路径", 16, TEAL_MID, 700)}
+  {T(72, 662, "以体系起势驱动机制落地，打造支撑公司高质量发展的「第二生产力」", 12, "#94A3B8", 400)}
 '''
     return svg_wrap(body)
 
 
-# ───────────────── Slide 3: 五大体系 01-04（对应图3） ─────────────────
+# ───────────────── Slide 3: 五大体系 01-04 ─────────────────
 
 def slide_03():
     blocks = [
@@ -226,27 +240,29 @@ def slide_03():
           "红黑榜：部门负责人作为第一责任人，公开红黑榜展示改善结果，奖惩清晰、闭环管理。"]),
     ]
     body = f'''
-  {T(56, 42, "五大体系", 28, NAVY, 800)}
-  {R(56, 52, 64, 4, ORANGE, r=2)}
-  {T(56, 82, "管理支撑系统：对标 · 复制 · 育成 · 考核", 14, MUTED, 400)}
+  {R(0, 0, 1280, 72, INK, r=0)}
+  {T(48, 46, "五大体系", 26, "#fff", 700, font=HEAD)}
+  {T(200, 46, "管理支撑：对标 · 复制 · 育成 · 考核", 13, "#94A3B8", 400)}
+  {T(1180, 46, "03 / 06", 12, TEAL_MID, 600, "end")}
 '''
-    positions = [(56, 110), (668, 110), (56, 400), (668, 400)]
+    positions = [(40, 100), (660, 100), (40, 400), (660, 400)]
     for (num, title, sub, bullets), (x, y) in zip(blocks, positions):
         body += f'''
-  {R(x, y, 556, 265, CARD, LINE, shadow=True)}
-  {R(x, y, 556, 72, NAVY, r=12)}
-  <rect x="{x}" y="{y+52}" width="556" height="20" fill="{NAVY}"/>
-  {T(x + 24, y + 32, f"{num}  {title}", 18, "#fff", 800)}
-  {T(x + 24, y + 58, sub, 12, ORANGE, 600)}
+  {R(x, y, 580, 270, PAPER, LINE, r=4)}
+  {R(x, y, 72, 270, INK, r=0)}
+  {T(x + 36, y + 145, num, 22, TEAL_MID, 800, "middle")}
+  {T(x + 96, y + 48, title, 18, INK, 700, font=HEAD)}
+  {T(x + 96, y + 78, sub, 12, TEAL, 600)}
+  {rule(x + 96, y + 92, 40)}
 '''
-        yy = y + 105
+        yy = y + 120
         for b in bullets:
-            body += TB(x + 24, yy, wrap("· " + b, 28), 13, MUTED, 400, 1.4)
-            yy += 16 + 13 * 1.4 * len(wrap(b, 28))
+            body += TB(x + 96, yy, wrap("· " + b, 28), 12, MUTED, 400, 1.4)
+            yy += 14 + 12 * 1.4 * len(wrap(b, 28))
     return svg_wrap(body)
 
 
-# ───────────────── Slide 4: 价值生产力（对应图4） ─────────────────
+# ───────────────── Slide 4: 价值生产力 ─────────────────
 
 def slide_04():
     topics = [
@@ -257,48 +273,50 @@ def slide_04():
         ("精益数字化+", "以标准化为基础，全局拉通顶层数字化模型；整合 DMS、TPMS、QMS 等系统。"),
     ]
     body = f'''
-  {T(56, 40, "五大体系", 22, NAVY, 800)}
-  {T(56, 72, "＞ 价值生产力体系：以精益锚定核心课题、助力价值增长", 16, ORANGE, 700)}
-  {R(56, 84, 64, 3, ORANGE, r=2)}
+  {R(0, 0, 1280, 72, INK, r=0)}
+  {T(48, 42, "五大体系", 18, "#94A3B8", 500)}
+  {T(48, 66, "价值生产力体系：以精益锚定核心课题、助力价值增长", 16, TEAL_MID, 600)}
+  {T(1180, 46, "04 / 06", 12, TEAL_MID, 600, "end")}
 
-  {R(56, 110, 360, 430, "url(#navyGrad)", r=16)}
-  {T(84, 170, "05", 36, ORANGE, 800)}
-  {T(84, 220, "聚焦五大", 26, "#fff", 800)}
-  {T(84, 258, "核心课题", 26, "#fff", 800)}
-  {T(84, 300, "突破生产瓶颈", 16, "#A8C5D4", 500)}
-  {TB(84, 360, wrap("推动精益改善转化为产能增量、良率增量、效益增量，打造「第二生产力」引擎。", 16), 13, "#A8C5D4", 400, 1.45)}
+  {R(40, 100, 340, 450, "url(#inkGrad)", r=4)}
+  {T(68, 160, "05", 40, TEAL_MID, 800)}
+  {T(68, 220, "聚焦五大", 24, "#fff", 700, font=HEAD)}
+  {T(68, 258, "核心课题", 24, "#fff", 700, font=HEAD)}
+  {T(68, 300, "突破生产瓶颈", 14, "#94A3B8", 400)}
+  {TB(68, 360, wrap("推动精益改善转化为产能增量、良率增量、效益增量，打造「第二生产力」引擎。", 14), 12, "#CBD5E1", 400, 1.45)}
 '''
     for i, (title, desc) in enumerate(topics):
-        y = 110 + i * 86
+        y = 100 + i * 90
         body += f'''
-  {R(440, y, 784, 76, CARD, LINE, shadow=True)}
-  {R(440, y, 8, 76, ORANGE, r=0)}
-  {T(468, y + 30, f"0{i+1}  {title}", 17, NAVY, 800)}
-  {T(468, y + 56, desc, 12, MUTED, 400)}
+  {R(400, y, 840, 80, PAPER, LINE, r=4)}
+  {R(400, y, 6, 80, TEAL, r=0)}
+  {T(430, y + 32, f"0{i+1}  {title}", 16, INK, 700)}
+  {T(430, y + 58, desc, 12, MUTED, 400)}
 '''
     body += f'''
-  {R(56, 560, 1168, 110, ORANGE_SOFT, ORANGE, r=14)}
-  {T(84, 605, "＞ 实现管理与产能双增长", 16, ORANGE, 700)}
-  {TB(84, 635, ["推动精益改善转化为实实在在的 产能增量、良率增量、效益增量，打造支撑公司业务规模化、高质量发展的「第二生产力」引擎"], 13, TEXT, 500, 1.4)}
+  {R(40, 575, 1200, 105, TEAL_SOFT, TEAL, r=4)}
+  {T(68, 615, "实现管理与产能双增长", 15, TEAL, 700)}
+  {TB(68, 645, ["推动精益改善转化为实实在在的 产能增量、良率增量、效益增量，打造支撑公司业务规模化、高质量发展的「第二生产力」引擎"], 12, INK, 500, 1.35)}
 '''
     return svg_wrap(body)
 
 
-# ───────────────── Slide 5: 三个阶段（对应图5） ─────────────────
+# ───────────────── Slide 5: 三个阶段 ─────────────────
 
 def slide_05():
     body = f'''
-  {T(56, 38, "三个阶段", 26, NAVY, 800)}
-  {R(56, 48, 64, 4, ORANGE, r=2)}
+  {R(0, 0, 1280, 72, INK, r=0)}
+  {T(48, 46, "三个阶段", 26, "#fff", 700, font=HEAD)}
+  {T(1180, 46, "05 / 06", 12, TEAL_MID, 600, "end")}
 
-  {R(56, 70, 570, 78, CARD, LINE, shadow=True)}
-  {T(76, 100, "2026 上半年｜筑基起势（0→1）", 15, NAVY, 700)}
-  {T(76, 128, "建体系、树标杆、统一组织认知", 12, MUTED, 400)}
-  {R(654, 70, 570, 78, NAVY, r=12)}
-  {T(674, 100, "2026 下半年｜全域放大与价值兑现（1→N）", 15, "#fff", 700)}
-  {T(674, 128, "标杆复制、痛点攻坚、机制固化、产能效益兑现", 12, "#A8C5D4", 400)}
+  {R(40, 95, 590, 78, PAPER, LINE, r=4)}
+  {T(60, 125, "2026 上半年｜筑基起势（0→1）", 14, INK, 700)}
+  {T(60, 152, "建体系、树标杆、统一组织认知", 12, MUTED, 400)}
+  {R(650, 95, 590, 78, INK, r=4)}
+  {T(670, 125, "2026 下半年｜全域放大与价值兑现（1→N）", 14, "#fff", 700)}
+  {T(670, 152, "标杆复制、痛点攻坚、机制固化、产能效益兑现", 12, "#94A3B8", 400)}
 
-  {T(56, 175, "实施路径：三阶段推进，层层递进", 14, ORANGE, 700)}
+  {T(40, 200, "实施路径：三阶段推进，层层递进", 13, TEAL, 700)}
 '''
     phases = [
         ("01", "7–8 月", "标杆认证 · 统一执行标准",
@@ -318,28 +336,28 @@ def slide_05():
          "形成长效精益管理机制，管理成果固化、价值清晰可见"),
     ]
     for i, (num, time, theme, bullets, goal) in enumerate(phases):
-        x = 56 + i * 405
-        head = ORANGE if i == 1 else NAVY
+        x = 40 + i * 410
+        head = TEAL if i == 1 else INK
         body += f'''
-  {R(x, 195, 390, 465, CARD, LINE, shadow=True)}
-  {R(x, 195, 390, 88, head, r=12)}
-  <rect x="{x}" y="263" width="390" height="20" fill="{head}"/>
-  {T(x + 20, 230, f"{num}  {time}", 13, "#fff" if i == 1 else ORANGE, 700)}
-  {T(x + 20, 262, theme, 16, "#fff", 800)}
+  {R(x, 220, 390, 450, PAPER, LINE, r=4)}
+  {R(x, 220, 390, 86, head, r=4)}
+  <rect x="{x}" y="280" width="390" height="26" fill="{head}"/>
+  {T(x + 20, 255, f"{num}  {time}", 12, TEAL_MID if i != 1 else "#fff", 700)}
+  {T(x + 20, 285, theme, 15, "#fff", 700)}
 '''
-        yy = 310
+        yy = 335
         for b in bullets:
             lines = wrap("· " + b, 18)
             body += TB(x + 18, yy, lines, 12, MUTED, 400, 1.35)
             yy += 10 + int(12 * 1.35 * len(lines))
         body += f'''
-  {R(x + 14, 560, 362, 80, ORANGE_SOFT, r=10)}
-  {TB(x + 26, 588, wrap("目标：" + goal, 18), 12, NAVY, 600, 1.35)}
+  {R(x + 14, 575, 362, 75, TEAL_SOFT, r=4)}
+  {TB(x + 26, 600, wrap("目标：" + goal, 18), 11, INK, 600, 1.35)}
 '''
     return svg_wrap(body)
 
 
-# ───────────────── Slide 6: 真善美（对应图6） ─────────────────
+# ───────────────── Slide 6: 真善美 ─────────────────
 
 def slide_06():
     cols = [
@@ -363,21 +381,21 @@ def slide_06():
          "长效改善", "成果标准化、持续精进，让改善成日常"),
     ]
     body = f'''
-  {T(56, 38, "精益全域落地｜以「真善美」锚定改善底层逻辑", 22, NAVY, 800)}
-  {R(56, 48, 64, 4, ORANGE, r=2)}
-  {T(56, 78, "所有精益课题、现场改善、体系运行统一对标公司核心价值主张，构建可信、有效、长效的改善闭环", 12, MUTED, 400)}
+  {R(0, 0, 1280, 72, INK, r=0)}
+  {T(48, 42, "精益全域落地｜以「真善美」锚定改善底层逻辑", 18, "#fff", 700, font=HEAD)}
+  {T(48, 64, "统一对标公司核心价值主张，构建可信、有效、长效的改善闭环", 11, "#94A3B8", 400)}
+  {T(1180, 46, "06 / 06", 12, TEAL_MID, 600, "end")}
 '''
     for i, (title, defn, lead, bullets, outcome, foot) in enumerate(cols):
-        x = 56 + i * 405
-        head = NAVY if i != 1 else "#0D8A7A"
-        soft = ORANGE_SOFT if i != 1 else "#E8F6F3"
-        accent = ORANGE if i != 1 else "#0D8A7A"
+        x = 40 + i * 410
+        head = INK if i != 1 else TEAL
+        soft = TEAL_SOFT
         body += f'''
-  {R(x, 100, 390, 560, CARD, LINE, shadow=True)}
-  {R(x, 100, 390, 100, head, r=12)}
+  {R(x, 100, 390, 560, PAPER, LINE, r=4)}
+  {R(x, 100, 390, 100, head, r=4)}
   <rect x="{x}" y="180" width="390" height="20" fill="{head}"/>
-  {T(x + 22, 140, title, 26, "#fff", 800)}
-  {T(x + 22, 175, defn, 13, "#A8C5D4", 500)}
+  {T(x + 22, 145, title, 24, "#fff", 700, font=HEAD)}
+  {T(x + 22, 175, defn, 12, "#94A3B8" if i != 1 else "#CCFBF1", 500)}
   {TB(x + 20, 230, wrap(lead, 20), 12, TEXT, 500, 1.35)}
 '''
         yy = 290
@@ -386,9 +404,9 @@ def slide_06():
             body += TB(x + 18, yy, lines, 12, MUTED, 400, 1.35)
             yy += 8 + int(12 * 1.35 * len(lines))
         body += f'''
-  {R(x + 14, 545, 362, 95, soft, r=10)}
-  {T(x + 28, 580, outcome, 15, accent, 800)}
-  {TB(x + 28, 608, wrap(foot, 18), 12, NAVY, 500, 1.35)}
+  {R(x + 14, 545, 362, 95, soft, r=4)}
+  {T(x + 28, 580, outcome, 15, TEAL, 700)}
+  {TB(x + 28, 608, wrap(foot, 18), 12, INK, 500, 1.35)}
 '''
     return svg_wrap(body)
 
@@ -403,9 +421,9 @@ SLIDES = [
 ]
 
 
-# ───────────────── PPTX（6 页，内容同截图） ─────────────────
+# ───────────────── PPTX ─────────────────
 
-def set_font(run, size=12, bold=False, color=RGBColor(0x2C, 0x3E, 0x50)):
+def set_font(run, size=12, bold=False, color=RGBColor(0x0F, 0x17, 0x2A)):
     run.font.size = Pt(size)
     run.font.bold = bold
     run.font.color.rgb = color
@@ -417,23 +435,25 @@ def set_font(run, size=12, bold=False, color=RGBColor(0x2C, 0x3E, 0x50)):
     ea.set("typeface", "Microsoft YaHei")
 
 
-def box(slide, l, t, w, h, fill, line=None):
-    sh = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, l, t, w, h)
+def box(slide, l, t, w, h, fill, line=None, radius=True):
+    shape = MSO_SHAPE.ROUNDED_RECTANGLE if radius else MSO_SHAPE.RECTANGLE
+    sh = slide.shapes.add_shape(shape, l, t, w, h)
     sh.fill.solid()
     sh.fill.fore_color.rgb = fill
     if line is None:
         sh.line.fill.background()
     else:
         sh.line.color.rgb = line
-        sh.line.width = Pt(1.25)
-    try:
-        sh.adjustments[0] = 0.08
-    except Exception:
-        pass
+        sh.line.width = Pt(1)
+    if radius:
+        try:
+            sh.adjustments[0] = 0.04
+        except Exception:
+            pass
     return sh
 
 
-def tb(slide, l, t, w, h, text, size=14, bold=False, color=RGBColor(0x2C, 0x3E, 0x50), align=PP_ALIGN.LEFT):
+def tb(slide, l, t, w, h, text, size=14, bold=False, color=RGBColor(0x0F, 0x17, 0x2A), align=PP_ALIGN.LEFT):
     b = slide.shapes.add_textbox(l, t, w, h)
     tf = b.text_frame
     tf.word_wrap = True
@@ -450,20 +470,20 @@ def build_pptx():
     prs.slide_width = Inches(13.333)
     prs.slide_height = Inches(7.5)
     blank = prs.slide_layouts[6]
-    N = RGBColor(0x1B, 0x3A, 0x5F)
-    O = RGBColor(0xE8, 0x7A, 0x2E)
+    N = RGBColor(0x0F, 0x17, 0x2A)
+    Teal = RGBColor(0x0F, 0x76, 0x6E)
+    TealSoft = RGBColor(0xCC, 0xFB, 0xF1)
     W = RGBColor(0xFF, 0xFF, 0xFF)
-    M = RGBColor(0x5D, 0x6D, 0x7E)
-    TCOL = RGBColor(0x2C, 0x3E, 0x50)
-    L = RGBColor(0xE8, 0xEE, 0xF2)
-    Soft = RGBColor(0xFF, 0xF4, 0xEB)
-    BG_c = RGBColor(0xFF, 0xFF, 0xFF)
-    Teal = RGBColor(0x0D, 0x8A, 0x7A)
+    M = RGBColor(0x64, 0x74, 0x8B)
+    Tcol = RGBColor(0x0F, 0x17, 0x2A)
+    L = RGBColor(0xCB, 0xD5, 0xE1)
+    BG_c = RGBColor(0xF1, 0xF5, 0xF9)
 
-    # --- P1 痛点 ---
+    # P1
     s = prs.slides.add_slide(blank)
-    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c)
-    tb(s, Inches(0.45), Inches(0.25), Inches(12), Inches(0.45), "当前精益推进现存真实痛点", 26, True, N)
+    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c, radius=False)
+    box(s, 0, 0, prs.slide_width, Inches(0.75), N, radius=False)
+    tb(s, Inches(0.45), Inches(0.2), Inches(11), Inches(0.4), "当前精益推进现存真实痛点", 22, True, W)
     pains = [
         ("01 落地不均衡，标杆与常态两极分化",
          "标杆产线成果显著，但多数产线仍停留在表层5S整改；深层次浪费与工艺瓶颈未触及，存在「重展示、轻落地、难持续」的形式化问题。"),
@@ -479,25 +499,25 @@ def build_pptx():
     for i, (title, desc) in enumerate(pains):
         col, row = (0, i) if i < 3 else (1, i - 3)
         x = Inches(0.4 + col * 6.45)
-        y = Inches(0.9 + row * 1.9)
-        box(s, x, y, Inches(6.2), Inches(1.75), W, L)
-        tb(s, x + Inches(0.2), y + Inches(0.15), Inches(5.8), Inches(0.35), title, 14, True, O)
-        tb(s, x + Inches(0.2), y + Inches(0.55), Inches(5.8), Inches(1.05), desc, 12, False, M)
-    box(s, Inches(6.85), Inches(4.7), Inches(6.2), Inches(2.35), Soft, O)
+        y = Inches(1.0 + row * 1.85)
+        box(s, x, y, Inches(6.2), Inches(1.7), W, L)
+        tb(s, x + Inches(0.2), y + Inches(0.15), Inches(5.8), Inches(0.35), title, 13, True, Teal)
+        tb(s, x + Inches(0.2), y + Inches(0.55), Inches(5.8), Inches(1.0), desc, 11, False, M)
+    box(s, Inches(6.85), Inches(4.7), Inches(6.2), Inches(2.35), N)
     tb(s, Inches(7.1), Inches(4.95), Inches(5.7), Inches(1.9),
-       "精益生产本质是消除浪费与持续改善；实践中仍面临从表层整改到深层次攻坚的多重执行挑战。\n"
-       "闭环机制与数据沉淀是精益从「运动式」走向「常态化」的关键，破除形式主义、回归价值创造。",
-       12, False, TCOL)
+       "关键判断\n精益生产本质是消除浪费与持续改善；实践中仍面临从表层整改到深层次攻坚的多重执行挑战。\n闭环机制与数据沉淀是精益从「运动式」走向「常态化」的关键，破除形式主义、回归价值创造。",
+       12, False, W)
 
-    # --- P2 筑基势起 ---
+    # P2
     s = prs.slides.add_slide(blank)
-    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c)
-    tb(s, Inches(0.45), Inches(0.2), Inches(12), Inches(0.4), "筑基 →「势起」", 24, True, N)
-    tb(s, Inches(0.45), Inches(0.65), Inches(12.4), Inches(0.7),
+    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c, radius=False)
+    box(s, 0, 0, prs.slide_width, Inches(0.75), N, radius=False)
+    tb(s, Inches(0.45), Inches(0.2), Inches(12), Inches(0.4), "筑基 →「势起」", 22, True, W)
+    tb(s, Inches(0.45), Inches(0.9), Inches(12.4), Inches(0.65),
        "自2025年9月以来，GPS精益体系已从「探索与单点整改」迈入「体系起势与机制落地」阶段。"
        "2026年为关键推进年：精益作为「第二生产力」，以「453」框架启航精益转型，践行「真善美」价值主张。",
-       12, False, M)
-    tb(s, Inches(0.45), Inches(1.4), Inches(4), Inches(0.3), "四级架构", 13, True, O)
+       11, False, M)
+    tb(s, Inches(0.45), Inches(1.6), Inches(4), Inches(0.25), "四级架构", 12, True, Teal)
     for i, (a, b) in enumerate([
         ("决策层·战略引领", "确立战略/审批课题/资源政策支持"),
         ("推进层·体系赋能", "体系规划/方法导入/督导与育人"),
@@ -505,33 +525,33 @@ def build_pptx():
         ("落地层·现场改善", "班组SOP/现场提案改善"),
     ]):
         x = Inches(0.45 + i * 3.2)
-        box(s, x, Inches(1.75), Inches(3.05), Inches(1.15), W, L)
-        tb(s, x + Inches(0.12), Inches(1.9), Inches(2.8), Inches(0.3), a, 13, True, N)
-        tb(s, x + Inches(0.12), Inches(2.3), Inches(2.8), Inches(0.45), b, 11, False, M)
-    tb(s, Inches(0.45), Inches(3.15), Inches(4), Inches(0.3), "五大体系", 13, True, O)
+        box(s, x, Inches(1.95), Inches(3.05), Inches(1.1), W, L)
+        tb(s, x + Inches(0.12), Inches(2.1), Inches(2.8), Inches(0.3), a, 12, True, N)
+        tb(s, x + Inches(0.12), Inches(2.5), Inches(2.8), Inches(0.4), b, 10, False, M)
+    tb(s, Inches(0.45), Inches(3.25), Inches(4), Inches(0.25), "五大体系", 12, True, Teal)
     for i, name in enumerate(["01对标研学", "02标杆复制", "03人才育成", "04考核管控", "05价值生产力"]):
         x = Inches(0.45 + i * 2.55)
-        box(s, x, Inches(3.5), Inches(2.4), Inches(0.7), Soft if i == 4 else W, O if i == 4 else L)
-        tb(s, x, Inches(3.65), Inches(2.4), Inches(0.4), name, 13, True, N, PP_ALIGN.CENTER)
-    tb(s, Inches(0.45), Inches(4.45), Inches(8), Inches(0.3), "三阶段路径（2026下半年）", 13, True, O)
+        box(s, x, Inches(3.55), Inches(2.4), Inches(0.65), TealSoft if i == 4 else W, Teal if i == 4 else L)
+        tb(s, x, Inches(3.7), Inches(2.4), Inches(0.35), name, 12, True, N, PP_ALIGN.CENTER)
+    tb(s, Inches(0.45), Inches(4.45), Inches(8), Inches(0.25), "三阶段路径（2026下半年）", 12, True, Teal)
     for i, (t, d) in enumerate([
         ("7–8月 筑基巩固期", "补短板、定标准、全员培训"),
         ("9–10月 攻坚突破期", "专项课题，解决核心痛点瓶颈"),
         ("11–12月 价值兑现期", "固化成果、长效机制、效益验证"),
     ]):
         x = Inches(0.45 + i * 4.25)
-        box(s, x, Inches(4.85), Inches(4.05), Inches(1.2), W, L)
-        tb(s, x + Inches(0.15), Inches(5.0), Inches(3.7), Inches(0.3), t, 13, True, N)
-        tb(s, x + Inches(0.15), Inches(5.4), Inches(3.7), Inches(0.4), d, 12, False, M)
-    box(s, Inches(0.45), Inches(6.3), Inches(12.4), Inches(0.85), N)
-    tb(s, Inches(0.7), Inches(6.5), Inches(12), Inches(0.5),
-       "453框架 = 四级架构 × 五大体系 × 三阶段路径　｜　打造「第二生产力」", 14, True, W)
+        box(s, x, Inches(4.8), Inches(4.05), Inches(1.1), W, L)
+        tb(s, x + Inches(0.15), Inches(4.95), Inches(3.7), Inches(0.3), t, 12, True, N)
+        tb(s, x + Inches(0.15), Inches(5.35), Inches(3.7), Inches(0.35), d, 11, False, M)
+    box(s, Inches(0.45), Inches(6.2), Inches(12.4), Inches(0.9), N)
+    tb(s, Inches(0.7), Inches(6.45), Inches(12), Inches(0.45),
+       "453框架 = 四级架构 × 五大体系 × 三阶段路径　｜　打造「第二生产力」", 13, True, W)
 
-    # --- P3 五大体系01-04 ---
+    # P3
     s = prs.slides.add_slide(blank)
-    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c)
-    tb(s, Inches(0.45), Inches(0.2), Inches(12), Inches(0.4), "五大体系", 24, True, N)
-    tb(s, Inches(0.45), Inches(0.6), Inches(12), Inches(0.3), "管理支撑系统：对标 · 复制 · 育成 · 考核", 12, False, M)
+    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c, radius=False)
+    box(s, 0, 0, prs.slide_width, Inches(0.75), N, radius=False)
+    tb(s, Inches(0.45), Inches(0.2), Inches(12), Inches(0.4), "五大体系", 22, True, W)
     details = [
         ("01 对标研学体系", "从「被动学习」到「对标赶超」",
          "三维对标：横向内部基地+纵向工序+制造标杆，识别绩效差距。\n量化整改：聚焦能耗、良率、OEE等核心KPI，月度差距清单与整改计划。"),
@@ -546,23 +566,24 @@ def build_pptx():
         col, row = i % 2, i // 2
         x, y = Inches(0.4 + col * 6.5), Inches(1.05 + row * 3.05)
         box(s, x, y, Inches(6.25), Inches(2.85), W, L)
-        box(s, x, y, Inches(6.25), Inches(0.85), N)
-        tb(s, x + Inches(0.2), y + Inches(0.15), Inches(5.8), Inches(0.3), title, 15, True, W)
-        tb(s, x + Inches(0.2), y + Inches(0.48), Inches(5.8), Inches(0.3), sub, 11, False, O)
-        tb(s, x + Inches(0.2), y + Inches(1.1), Inches(5.8), Inches(1.5), body_txt, 12, False, M)
+        box(s, x, y, Inches(0.7), Inches(2.85), N, radius=False)
+        tb(s, x + Inches(0.1), y + Inches(1.15), Inches(0.5), Inches(0.4), f"0{i+1}", 14, True, Teal, PP_ALIGN.CENTER)
+        tb(s, x + Inches(0.9), y + Inches(0.25), Inches(5.1), Inches(0.35), title, 14, True, N)
+        tb(s, x + Inches(0.9), y + Inches(0.65), Inches(5.1), Inches(0.3), sub, 11, False, Teal)
+        tb(s, x + Inches(0.9), y + Inches(1.15), Inches(5.1), Inches(1.4), body_txt, 11, False, M)
 
-    # --- P4 价值生产力 ---
+    # P4
     s = prs.slides.add_slide(blank)
-    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c)
-    tb(s, Inches(0.45), Inches(0.2), Inches(12), Inches(0.35), "五大体系", 20, True, N)
-    tb(s, Inches(0.45), Inches(0.55), Inches(12), Inches(0.35),
-       "＞ 价值生产力体系：以精益锚定核心课题、助力价值增长", 14, True, O)
-    box(s, Inches(0.4), Inches(1.05), Inches(4.0), Inches(4.7), N)
-    tb(s, Inches(0.7), Inches(1.5), Inches(3.4), Inches(0.4), "05", 28, True, O)
-    tb(s, Inches(0.7), Inches(2.2), Inches(3.4), Inches(1.0), "聚焦五大\n核心课题", 24, True, W)
-    tb(s, Inches(0.7), Inches(3.5), Inches(3.4), Inches(0.4), "突破生产瓶颈", 14, False, RGBColor(0xA8, 0xC5, 0xD4))
-    tb(s, Inches(0.7), Inches(4.2), Inches(3.4), Inches(1.2),
-       "推动精益改善转化为产能增量、良率增量、效益增量，打造「第二生产力」引擎。", 12, False, RGBColor(0xA8, 0xC5, 0xD4))
+    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c, radius=False)
+    box(s, 0, 0, prs.slide_width, Inches(0.75), N, radius=False)
+    tb(s, Inches(0.45), Inches(0.15), Inches(12), Inches(0.25), "五大体系", 14, False, RGBColor(0x94, 0xA3, 0xB8))
+    tb(s, Inches(0.45), Inches(0.4), Inches(12), Inches(0.3), "价值生产力体系：以精益锚定核心课题、助力价值增长", 14, True, Teal)
+    box(s, Inches(0.4), Inches(1.05), Inches(4.0), Inches(4.6), N)
+    tb(s, Inches(0.7), Inches(1.5), Inches(3.4), Inches(0.4), "05", 28, True, Teal)
+    tb(s, Inches(0.7), Inches(2.2), Inches(3.4), Inches(1.0), "聚焦五大\n核心课题", 22, True, W)
+    tb(s, Inches(0.7), Inches(3.5), Inches(3.4), Inches(0.35), "突破生产瓶颈", 12, False, RGBColor(0x94, 0xA3, 0xB8))
+    tb(s, Inches(0.7), Inches(4.1), Inches(3.4), Inches(1.1),
+       "推动精益改善转化为产能增量、良率增量、效益增量，打造「第二生产力」引擎。", 11, False, RGBColor(0xCB, 0xD5, 0xE1))
     topics = [
         "01 拉晶硅损优化 — 厘清硅损价值链浪费点；降低切割与磨削余量；提升硅料利用效率。",
         "02 切片损耗管控 — 攻克断线、碎片难点；提升硅片切割良率与优品率。",
@@ -571,26 +592,27 @@ def build_pptx():
         "05 精益数字化+ — 以标准化为基础，拉通顶层数字化模型；整合DMS、TPMS、QMS。",
     ]
     for i, line in enumerate(topics):
-        y = Inches(1.05 + i * 0.95)
-        box(s, Inches(4.65), y, Inches(8.25), Inches(0.85), W, L)
-        tb(s, Inches(4.9), y + Inches(0.22), Inches(7.8), Inches(0.5), line, 12, True, N)
-    box(s, Inches(0.4), Inches(6.0), Inches(12.5), Inches(1.15), Soft, O)
-    tb(s, Inches(0.7), Inches(6.2), Inches(12), Inches(0.3), "＞ 实现管理与产能双增长", 14, True, O)
-    tb(s, Inches(0.7), Inches(6.55), Inches(12), Inches(0.45),
+        y = Inches(1.05 + i * 0.92)
+        box(s, Inches(4.65), y, Inches(8.25), Inches(0.82), W, L)
+        tb(s, Inches(4.9), y + Inches(0.2), Inches(7.8), Inches(0.5), line, 11, True, N)
+    box(s, Inches(0.4), Inches(5.9), Inches(12.5), Inches(1.2), TealSoft, Teal)
+    tb(s, Inches(0.7), Inches(6.1), Inches(12), Inches(0.3), "实现管理与产能双增长", 13, True, Teal)
+    tb(s, Inches(0.7), Inches(6.45), Inches(12), Inches(0.45),
        "推动精益改善转化为实实在在的产能增量、良率增量、效益增量，打造支撑公司业务规模化、高质量发展的「第二生产力」引擎。",
-       12, False, TCOL)
+       11, False, Tcol)
 
-    # --- P5 三阶段 ---
+    # P5
     s = prs.slides.add_slide(blank)
-    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c)
-    tb(s, Inches(0.45), Inches(0.15), Inches(12), Inches(0.35), "三个阶段", 22, True, N)
-    box(s, Inches(0.4), Inches(0.6), Inches(6.1), Inches(0.85), W, L)
-    tb(s, Inches(0.6), Inches(0.75), Inches(5.7), Inches(0.3), "2026上半年｜筑基起势（0→1）", 13, True, N)
-    tb(s, Inches(0.6), Inches(1.1), Inches(5.7), Inches(0.25), "建体系、树标杆、统一组织认知", 11, False, M)
-    box(s, Inches(6.75), Inches(0.6), Inches(6.1), Inches(0.85), N)
-    tb(s, Inches(6.95), Inches(0.75), Inches(5.7), Inches(0.3), "2026下半年｜全域放大与价值兑现（1→N）", 13, True, W)
-    tb(s, Inches(6.95), Inches(1.1), Inches(5.7), Inches(0.25), "标杆复制、痛点攻坚、机制固化、产能效益兑现", 11, False, RGBColor(0xA8, 0xC5, 0xD4))
-    tb(s, Inches(0.45), Inches(1.6), Inches(10), Inches(0.3), "实施路径：三阶段推进，层层递进", 12, True, O)
+    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c, radius=False)
+    box(s, 0, 0, prs.slide_width, Inches(0.75), N, radius=False)
+    tb(s, Inches(0.45), Inches(0.2), Inches(12), Inches(0.4), "三个阶段", 22, True, W)
+    box(s, Inches(0.4), Inches(0.95), Inches(6.1), Inches(0.8), W, L)
+    tb(s, Inches(0.6), Inches(1.05), Inches(5.7), Inches(0.3), "2026上半年｜筑基起势（0→1）", 12, True, N)
+    tb(s, Inches(0.6), Inches(1.4), Inches(5.7), Inches(0.25), "建体系、树标杆、统一组织认知", 10, False, M)
+    box(s, Inches(6.75), Inches(0.95), Inches(6.1), Inches(0.8), N)
+    tb(s, Inches(6.95), Inches(1.05), Inches(5.7), Inches(0.3), "2026下半年｜全域放大与价值兑现（1→N）", 12, True, W)
+    tb(s, Inches(6.95), Inches(1.4), Inches(5.7), Inches(0.25), "标杆复制、痛点攻坚、机制固化、产能效益兑现", 10, False, RGBColor(0x94, 0xA3, 0xB8))
+    tb(s, Inches(0.45), Inches(1.95), Inches(10), Inches(0.25), "实施路径：三阶段推进，层层递进", 12, True, Teal)
     stages = [
         ("01  7–8月", "标杆认证 · 统一执行标准",
          "· 标杆车间/产线认证；8月明确复制进度，全工序夯实管理基础。\n"
@@ -610,21 +632,22 @@ def build_pptx():
     ]
     for i, (t, theme, acts, goal) in enumerate(stages):
         x = Inches(0.4 + i * 4.3)
-        box(s, x, Inches(2.0), Inches(4.1), Inches(5.1), W, L)
-        box(s, x, Inches(2.0), Inches(4.1), Inches(1.15), O if i == 1 else N)
-        tb(s, x + Inches(0.2), Inches(2.15), Inches(3.7), Inches(0.3), t, 12, True, W)
-        tb(s, x + Inches(0.2), Inches(2.55), Inches(3.7), Inches(0.35), theme, 14, True, W)
-        tb(s, x + Inches(0.2), Inches(3.4), Inches(3.7), Inches(2.4), acts, 11, False, M)
-        box(s, x + Inches(0.15), Inches(5.9), Inches(3.8), Inches(1.0), Soft)
-        tb(s, x + Inches(0.3), Inches(6.05), Inches(3.5), Inches(0.75), goal, 11, True, N)
+        box(s, x, Inches(2.35), Inches(4.1), Inches(4.7), W, L)
+        box(s, x, Inches(2.35), Inches(4.1), Inches(1.1), Teal if i == 1 else N)
+        tb(s, x + Inches(0.2), Inches(2.5), Inches(3.7), Inches(0.3), t, 11, True, W)
+        tb(s, x + Inches(0.2), Inches(2.9), Inches(3.7), Inches(0.35), theme, 13, True, W)
+        tb(s, x + Inches(0.2), Inches(3.7), Inches(3.7), Inches(2.2), acts, 11, False, M)
+        box(s, x + Inches(0.15), Inches(5.9), Inches(3.8), Inches(0.95), TealSoft)
+        tb(s, x + Inches(0.3), Inches(6.05), Inches(3.5), Inches(0.7), goal, 10, True, N)
 
-    # --- P6 真善美 ---
+    # P6
     s = prs.slides.add_slide(blank)
-    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c)
-    tb(s, Inches(0.4), Inches(0.15), Inches(12.5), Inches(0.35),
-       "精益全域落地｜以「真善美」锚定改善底层逻辑", 18, True, N)
-    tb(s, Inches(0.4), Inches(0.55), Inches(12.5), Inches(0.35),
-       "所有精益课题、现场改善、体系运行统一对标公司核心价值主张，构建可信、有效、长效的改善闭环", 11, False, M)
+    box(s, 0, 0, prs.slide_width, prs.slide_height, BG_c, radius=False)
+    box(s, 0, 0, prs.slide_width, Inches(0.75), N, radius=False)
+    tb(s, Inches(0.4), Inches(0.15), Inches(12.5), Inches(0.3),
+       "精益全域落地｜以「真善美」锚定改善底层逻辑", 16, True, W)
+    tb(s, Inches(0.4), Inches(0.45), Inches(12.5), Inches(0.25),
+       "所有精益课题、现场改善、体系运行统一对标公司核心价值主张，构建可信、有效、长效的改善闭环", 10, False, RGBColor(0x94, 0xA3, 0xB8))
     cols = [
         (N, "守「真」", "数据驱动、过程可控",
          "全流程可追溯：损耗/OEE实时采集，量化收益。\nSPC底线：工艺参数设限，异常自动预警。\n根因分析：以真实缺陷为依据，拒绝主观归因。",
@@ -638,13 +661,13 @@ def build_pptx():
     ]
     for i, (c, title, defn, body_txt, foot) in enumerate(cols):
         x = Inches(0.4 + i * 4.3)
-        box(s, x, Inches(1.05), Inches(4.1), Inches(6.0), W, L)
-        box(s, x, Inches(1.05), Inches(4.1), Inches(1.2), c)
-        tb(s, x + Inches(0.2), Inches(1.25), Inches(3.7), Inches(0.4), title, 20, True, W)
-        tb(s, x + Inches(0.2), Inches(1.75), Inches(3.7), Inches(0.3), defn, 12, False, RGBColor(0xA8, 0xC5, 0xD4))
-        tb(s, x + Inches(0.2), Inches(2.55), Inches(3.7), Inches(2.8), body_txt, 12, False, M)
-        box(s, x + Inches(0.15), Inches(5.6), Inches(3.8), Inches(1.2), Soft)
-        tb(s, x + Inches(0.3), Inches(5.8), Inches(3.5), Inches(0.85), foot, 12, True, N)
+        box(s, x, Inches(1.0), Inches(4.1), Inches(6.05), W, L)
+        box(s, x, Inches(1.0), Inches(4.1), Inches(1.15), c)
+        tb(s, x + Inches(0.2), Inches(1.2), Inches(3.7), Inches(0.4), title, 18, True, W)
+        tb(s, x + Inches(0.2), Inches(1.7), Inches(3.7), Inches(0.3), defn, 11, False, RGBColor(0x94, 0xA3, 0xB8))
+        tb(s, x + Inches(0.2), Inches(2.5), Inches(3.7), Inches(2.8), body_txt, 11, False, M)
+        box(s, x + Inches(0.15), Inches(5.55), Inches(3.8), Inches(1.25), TealSoft)
+        tb(s, x + Inches(0.3), Inches(5.75), Inches(3.5), Inches(0.9), foot, 11, True, N)
 
     out = OUT_DIR / "GPS精益_筑基势起_向总汇报.pptx"
     prs.save(str(out))
@@ -656,9 +679,9 @@ def write_html(labels):
     tpl_path = ROOT.parents[1] / "skills/_shared/assets/preview-template.html"
     template = tpl_path.read_text(encoding="utf-8")
     html_out = (
-        template.replace("{{TITLE}}", "GPS精益｜筑基→势起（6页）")
+        template.replace("{{TITLE}}", "GPS精益｜筑基→势起（模板B）")
         .replace("{{LOGO}}", "GPS")
-        .replace("{{ACCENT_COLOR}}", ORANGE)
+        .replace("{{ACCENT_COLOR}}", TEAL)
         .replace("{{SLIDES_JSON}}", json.dumps(labels, ensure_ascii=False))
     )
     (OUT_DIR / "index.html").write_text(html_out, encoding="utf-8")
@@ -669,6 +692,7 @@ def write_meta():
         json.dumps(
             {
                 "title": "GPS精益｜筑基→势起",
+                "template": "precision-slate-teal",
                 "approved": True,
                 "pages": [{"index": i + 1, "title": label, "file": name} for i, (name, label, _) in enumerate(SLIDES)],
             },
@@ -678,26 +702,16 @@ def write_meta():
         encoding="utf-8",
     )
     (ROOT / "README.md").write_text(
-        """# GPS 精益｜筑基→「势起」（6页 · 对齐原稿）
+        """# GPS 精益｜筑基→「势起」（6页）
 
-严格按用户提供的 6 张原稿截图内容重建，不多页、不改叙事。
+内容对齐原稿 6 张截图；当前视觉为 **模板 B：精密青石灰**（slate + teal）。
 
-## 页面对照
+## 模板说明
+- 上一套：橙白商务圆角卡片
+- 当前套：石板黑顶栏 + 青绿强调 + 蓝图底纹 + 小圆角学术风
 
-| 页 | 内容 |
-|----|------|
-| 01 | 当前精益推进现存真实痛点 |
-| 02 | 筑基→「势起」（453总框架） |
-| 03 | 五大体系 01–04 |
-| 04 | 价值生产力体系 · 五大核心课题 |
-| 05 | 三个阶段 |
-| 06 | 真善美底层逻辑 |
-
-## 交付物
-
-- `output/slide-01.svg` … `slide-06.svg`
-- `output/index.html`
-- `output/GPS精益_筑基势起_向总汇报.pptx`
+## 页面
+01 痛点 · 02 筑基势起 · 03 五大体系01-04 · 04 价值生产力 · 05 三阶段 · 06 真善美
 
 ```bash
 python generate_deck.py
@@ -710,11 +724,6 @@ python generate_deck.py
 def main():
     SLIDES_DIR.mkdir(parents=True, exist_ok=True)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    # 清理旧的 7–10 页
-    for p in list(OUT_DIR.glob("slide-*.svg")) + list(SLIDES_DIR.glob("slide-*.svg")):
-        if p.name > "slide-06.svg":
-            p.unlink()
-            print("removed", p)
     labels = []
     for name, label, fn in SLIDES:
         content = fn()
@@ -725,7 +734,7 @@ def main():
     write_html(labels)
     write_meta()
     build_pptx()
-    print("DONE — 6 slides")
+    print("DONE — template B (precision slate-teal), 6 slides")
 
 
 if __name__ == "__main__":

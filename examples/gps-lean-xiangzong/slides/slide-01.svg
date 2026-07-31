@@ -1,70 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0F2740"/>
-      <stop offset="100%" stop-color="#1B3A5F"/>
+    <pattern id="bp" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0F766E" stroke-width="0.4" opacity="0.07"/>
+    </pattern>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
     </linearGradient>
-    <filter id="sh" x="-4%" y="-4%" width="108%" height="116%">
-      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1B3A5F" flood-opacity="0.08"/>
-    </filter>
   </defs>
-  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect width="1280" height="720" fill="#F1F5F9"/>
+  <rect width="1280" height="720" fill="url(#bp)"/>
 
-  <text x="56" y="52" fill="#1B3A5F" font-size="30" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">当前精益推进现存真实痛点</text>
-  <rect x="56" y="64" width="80" height="4" rx="2" ry="2" fill="#E87A2E" stroke="none"/>
+  <rect x="0" y="0" width="1280" height="72" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="48" y="46" fill="#fff" font-size="26" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">当前精益推进现存真实痛点</text>
+  <text x="1180" y="46" fill="#14B8A6" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">01 / 06</text>
 
-  <rect x="56" y="95" width="580" height="175" rx="12" ry="12" fill="#FFFFFF" stroke="#F0C9A8" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="56" y="95" width="8" height="175" rx="0" ry="0" fill="#E87A2E" stroke="none"/>
-  <text x="84" y="133" fill="#E87A2E" font-size="22" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">01</text>
-  <text x="84" y="167" fill="#1B3A5F" font-size="17" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">落地不均衡，标杆与常态两极分化</text>
-  <text x="84" y="197" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="84" dy="0">标杆产线成果显著，但多数产线仍停留在表层 5S 整改；深层次浪费与</tspan>
-<tspan x="84" dy="18">工艺瓶颈未触及，存在「重展示、轻落地、难持续」的形式化问题。</tspan>
+  <rect x="40" y="100" width="600" height="148" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="100" width="600" height="2" fill="#0F766E"/>
+  
+  <circle cx="76" cy="136" r="18" fill="#0F766E"/>
+  <text x="76" y="141" fill="#fff" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">01</text>
+
+  <text x="108" y="142" fill="#0F172A" font-size="15" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">落地不均衡，标杆与常态两极分化</text>
+  <text x="64" y="172" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="64" dy="0">标杆产线成果显著，但多数产线仍停留在表层 5S 整改；深层次浪费与</tspan>
+<tspan x="64" dy="16">工艺瓶颈未触及，存在「重展示、轻落地、难持续」的形式化问题。</tspan>
 </text>
 
-  <rect x="56" y="290" width="580" height="175" rx="12" ry="12" fill="#FFFFFF" stroke="#F0C9A8" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="56" y="290" width="8" height="175" rx="0" ry="0" fill="#E87A2E" stroke="none"/>
-  <text x="84" y="328" fill="#E87A2E" font-size="22" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">02</text>
-  <text x="84" y="362" fill="#1B3A5F" font-size="17" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">改善偏单点，系统性攻坚能力不足</text>
-  <text x="84" y="392" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="84" dy="0">改善多为碎片化整改，对拉晶高能耗、切片断线损耗等核心技术痛点攻坚不</tspan>
-<tspan x="84" dy="18">够，难以从根本上拉动良率与成本等关键指标。</tspan>
+  <rect x="40" y="265" width="600" height="148" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="265" width="600" height="2" fill="#0F766E"/>
+  
+  <circle cx="76" cy="301" r="18" fill="#0F766E"/>
+  <text x="76" y="306" fill="#fff" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">02</text>
+
+  <text x="108" y="307" fill="#0F172A" font-size="15" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">改善偏单点，系统性攻坚能力不足</text>
+  <text x="64" y="337" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="64" dy="0">改善多为碎片化整改，对拉晶高能耗、切片断线损耗等核心技术痛点攻坚不</tspan>
+<tspan x="64" dy="16">够，难以从根本上拉动良率与成本等关键指标。</tspan>
 </text>
 
-  <rect x="56" y="485" width="580" height="175" rx="12" ry="12" fill="#FFFFFF" stroke="#F0C9A8" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="56" y="485" width="8" height="175" rx="0" ry="0" fill="#E87A2E" stroke="none"/>
-  <text x="84" y="523" fill="#E87A2E" font-size="22" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">03</text>
-  <text x="84" y="557" fill="#1B3A5F" font-size="17" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">全员氛围不足，自主改善意识薄弱</text>
-  <text x="84" y="587" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="84" dy="0">推进仍依赖管理推动与专班督导，一线员工多为「被动执行」模式，</tspan>
-<tspan x="84" dy="18">尚未形成「主动找浪费、主动提改善、主动创价值」的精益文化。</tspan>
+  <rect x="40" y="430" width="600" height="148" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="430" width="600" height="2" fill="#0F766E"/>
+  
+  <circle cx="76" cy="466" r="18" fill="#0F766E"/>
+  <text x="76" y="471" fill="#fff" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">03</text>
+
+  <text x="108" y="472" fill="#0F172A" font-size="15" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">全员氛围不足，自主改善意识薄弱</text>
+  <text x="64" y="502" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="64" dy="0">推进仍依赖管理推动与专班督导，一线员工多为「被动执行」模式，</tspan>
+<tspan x="64" dy="16">尚未形成「主动找浪费、主动提改善、主动创价值」的精益文化。</tspan>
 </text>
 
-  <rect x="660" y="95" width="560" height="175" rx="12" ry="12" fill="#FFFFFF" stroke="#F0C9A8" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="660" y="95" width="8" height="175" rx="0" ry="0" fill="#E87A2E" stroke="none"/>
-  <text x="688" y="133" fill="#E87A2E" font-size="22" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">04</text>
-  <text x="688" y="167" fill="#1B3A5F" font-size="17" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">机制落地不彻底，考核未闭环</text>
-  <text x="688" y="197" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="688" dy="0">精益落地与人才晋升、基地评价挂钩常流于形式，缺乏量化指标支撑与</tspan>
-<tspan x="688" dy="18">清晰奖惩机制，导致管理关注度不一、基层执行驱动力不足。</tspan>
+  <rect x="660" y="100" width="600" height="148" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="660" y="100" width="600" height="2" fill="#0F766E"/>
+  
+  <circle cx="696" cy="136" r="18" fill="#0F766E"/>
+  <text x="696" y="141" fill="#fff" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">04</text>
+
+  <text x="728" y="142" fill="#0F172A" font-size="15" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">机制落地不彻底，考核未闭环</text>
+  <text x="684" y="172" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="684" dy="0">精益落地与人才晋升、基地评价挂钩常流于形式，缺乏量化指标支撑与清晰</tspan>
+<tspan x="684" dy="16">奖惩机制，导致管理关注度不一、基层执行驱动力不足。</tspan>
 </text>
 
-  <rect x="660" y="290" width="560" height="175" rx="12" ry="12" fill="#FFFFFF" stroke="#F0C9A8" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="660" y="290" width="8" height="175" rx="0" ry="0" fill="#E87A2E" stroke="none"/>
-  <text x="688" y="328" fill="#E87A2E" font-size="22" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">05</text>
-  <text x="688" y="362" fill="#1B3A5F" font-size="17" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">精益信息化缺失，改善难沉淀</text>
-  <text x="688" y="392" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="688" dy="0">改善经验难沉淀、难复制，数据与现场脱节，缺少统一数字化看板与闭</tspan>
-<tspan x="688" dy="18">环系统，难以支撑精益从「运动式」走向「常态化」。</tspan>
+  <rect x="660" y="265" width="600" height="148" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="660" y="265" width="600" height="2" fill="#0F766E"/>
+  
+  <circle cx="696" cy="301" r="18" fill="#0F766E"/>
+  <text x="696" y="306" fill="#fff" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">05</text>
+
+  <text x="728" y="307" fill="#0F172A" font-size="15" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">精益信息化缺失，改善难沉淀</text>
+  <text x="684" y="337" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="684" dy="0">改善经验难沉淀、难复制，数据与现场脱节，缺少统一数字化看板与闭环系</tspan>
+<tspan x="684" dy="16">统，难以支撑精益从「运动式」走向「常态化」。</tspan>
 </text>
 
-  <rect x="660" y="485" width="560" height="175" rx="12" ry="12" fill="#F7F9FB" stroke="#F0C9A8" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="688" y="525" fill="#2C3E50" font-size="13" font-weight="500" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+  <rect x="660" y="430" width="580" height="230" rx="4" ry="4" fill="#0F172A" stroke="none"/>
+  <text x="688" y="475" fill="#14B8A6" font-size="14" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">关键判断</text>
+  <text x="688" y="515" fill="#E2E8F0" font-size="13" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
 <tspan x="688" dy="0">精益生产本质是消除浪费与持续改善；实践中仍面临从表层整改到深层</tspan>
 <tspan x="688" dy="18">次攻坚的多重执行挑战。</tspan>
 </text>
-  <text x="688" y="595" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+  <text x="688" y="595" fill="#94A3B8" font-size="13" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
 <tspan x="688" dy="0">闭环机制与数据沉淀是精益从「运动式」走向「常态化」的关键，</tspan>
 <tspan x="688" dy="18">破除形式主义、回归价值创造。</tspan>
 </text>

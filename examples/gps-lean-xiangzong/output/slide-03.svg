@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0F2740"/>
-      <stop offset="100%" stop-color="#1B3A5F"/>
+    <pattern id="bp" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0F766E" stroke-width="0.4" opacity="0.07"/>
+    </pattern>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
     </linearGradient>
-    <filter id="sh" x="-4%" y="-4%" width="108%" height="116%">
-      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1B3A5F" flood-opacity="0.08"/>
-    </filter>
   </defs>
-  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect width="1280" height="720" fill="#F1F5F9"/>
+  <rect width="1280" height="720" fill="url(#bp)"/>
 
-  <text x="56" y="42" fill="#1B3A5F" font-size="28" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">五大体系</text>
-  <rect x="56" y="52" width="64" height="4" rx="2" ry="2" fill="#E87A2E" stroke="none"/>
-  <text x="56" y="82" fill="#5D6D7E" font-size="14" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">管理支撑系统：对标 · 复制 · 育成 · 考核</text>
+  <rect x="0" y="0" width="1280" height="72" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="48" y="46" fill="#fff" font-size="26" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">五大体系</text>
+  <text x="200" y="46" fill="#94A3B8" font-size="13" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">管理支撑：对标 · 复制 · 育成 · 考核</text>
+  <text x="1180" y="46" fill="#14B8A6" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">03 / 06</text>
 
-  <rect x="56" y="110" width="556" height="265" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="56" y="110" width="556" height="72" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="56" y="162" width="556" height="20" fill="#1B3A5F"/>
-  <text x="80" y="142" fill="#fff" font-size="18" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">01  对标研学体系</text>
-  <text x="80" y="168" fill="#E87A2E" font-size="12" font-weight="600" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「被动学习」到「对标赶超」</text>
-<text x="80" y="215" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="80" dy="0">· 三维对标：构建「横向内部基地 + 纵向工序 + 制造标杆」</tspan>
-<tspan x="80" dy="18">网络，识别绩效差距。</tspan>
-</text><text x="80" y="267.4" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="80" dy="0">· 量化整改：聚焦能耗、良率、OEE 等核心 KPI，形成月度</tspan>
-<tspan x="80" dy="18">差距清单与整改计划，确保改善见效。</tspan>
+  <rect x="40" y="100" width="580" height="270" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="100" width="72" height="270" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="76" y="245" fill="#14B8A6" font-size="22" font-weight="800" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">01</text>
+  <text x="136" y="148" fill="#0F172A" font-size="18" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">对标研学体系</text>
+  <text x="136" y="178" fill="#0F766E" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「被动学习」到「对标赶超」</text>
+  <rect x="136" y="192" width="40" height="2" fill="#0F766E"/>
+<text x="136" y="220" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="136" dy="0">· 三维对标：构建「横向内部基地 + 纵向工序 + 制造标杆」</tspan>
+<tspan x="136" dy="16">网络，识别绩效差距。</tspan>
+</text><text x="136" y="267.6" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="136" dy="0">· 量化整改：聚焦能耗、良率、OEE 等核心 KPI，形成月度</tspan>
+<tspan x="136" dy="16">差距清单与整改计划，确保改善见效。</tspan>
 </text>
-  <rect x="668" y="110" width="556" height="265" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="668" y="110" width="556" height="72" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="668" y="162" width="556" height="20" fill="#1B3A5F"/>
-  <text x="692" y="142" fill="#fff" font-size="18" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">02  标杆复制体系</text>
-  <text x="692" y="168" fill="#E87A2E" font-size="12" font-weight="600" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「单点标杆」到「全域标准化」</text>
-<text x="692" y="215" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="692" dy="0">· 标准化拆解：将标杆车间/产线成功经验沉淀为 SOP</tspan>
-<tspan x="692" dy="18">与点检标准，跨工序、跨产线复制。</tspan>
-</text><text x="692" y="267.4" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="692" dy="0">· 标杆升级：从基础 5S 走向提质增效、降本与零缺陷，</tspan>
-<tspan x="692" dy="18">打造行业领先标杆。</tspan>
+  <rect x="660" y="100" width="580" height="270" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="660" y="100" width="72" height="270" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="696" y="245" fill="#14B8A6" font-size="22" font-weight="800" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">02</text>
+  <text x="756" y="148" fill="#0F172A" font-size="18" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">标杆复制体系</text>
+  <text x="756" y="178" fill="#0F766E" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「单点标杆」到「全域标准化」</text>
+  <rect x="756" y="192" width="40" height="2" fill="#0F766E"/>
+<text x="756" y="220" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="756" dy="0">· 标准化拆解：将标杆车间/产线成功经验沉淀为 SOP</tspan>
+<tspan x="756" dy="16">与点检标准，跨工序、跨产线复制。</tspan>
+</text><text x="756" y="267.6" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="756" dy="0">· 标杆升级：从基础 5S 走向提质增效、降本与零缺陷，</tspan>
+<tspan x="756" dy="16">打造行业领先标杆。</tspan>
 </text>
-  <rect x="56" y="400" width="556" height="265" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="56" y="400" width="556" height="72" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="56" y="452" width="556" height="20" fill="#1B3A5F"/>
-  <text x="80" y="432" fill="#fff" font-size="18" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">03  人才育成体系</text>
-  <text x="80" y="458" fill="#E87A2E" font-size="12" font-weight="600" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「基础普及」到「精英赋能」</text>
-<text x="80" y="505" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="80" dy="0">· 三级梯队：精益骨干（执行层）+ 内训师（传播层）+</tspan>
-<tspan x="80" dy="18">精益专班（决策层）。</tspan>
-</text><text x="80" y="557.4" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="80" dy="0">· 利益深度绑定：精益认证与职业晋升通道、绩效薪酬激励挂钩，</tspan>
-<tspan x="80" dy="18">形成「学会—会用—受益」正循环。</tspan>
+  <rect x="40" y="400" width="580" height="270" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="400" width="72" height="270" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="76" y="545" fill="#14B8A6" font-size="22" font-weight="800" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">03</text>
+  <text x="136" y="448" fill="#0F172A" font-size="18" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">人才育成体系</text>
+  <text x="136" y="478" fill="#0F766E" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「基础普及」到「精英赋能」</text>
+  <rect x="136" y="492" width="40" height="2" fill="#0F766E"/>
+<text x="136" y="520" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="136" dy="0">· 三级梯队：精益骨干（执行层）+ 内训师（传播层）+</tspan>
+<tspan x="136" dy="16">精益专班（决策层）。</tspan>
+</text><text x="136" y="567.6" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="136" dy="0">· 利益深度绑定：精益认证与职业晋升通道、绩效薪酬激励挂钩，</tspan>
+<tspan x="136" dy="16">形成「学会—会用—受益」正循环。</tspan>
 </text>
-  <rect x="668" y="400" width="556" height="265" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="668" y="400" width="556" height="72" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="668" y="452" width="556" height="20" fill="#1B3A5F"/>
-  <text x="692" y="432" fill="#fff" font-size="18" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">04  考核管控体系</text>
-  <text x="692" y="458" fill="#E87A2E" font-size="12" font-weight="600" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「柔性要求」到「刚性闭环」</text>
-<text x="692" y="505" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="692" dy="0">· 制度化考核：精益改善指标全面纳入公司正式考核，对基地负责人</tspan>
-<tspan x="692" dy="18">与核心干部量化评价，避免形式主义。</tspan>
-</text><text x="692" y="557.4" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="692" dy="0">· 红黑榜：部门负责人作为第一责任人，公开红黑榜展示改善结果，</tspan>
-<tspan x="692" dy="18">奖惩清晰、闭环管理。</tspan>
+  <rect x="660" y="400" width="580" height="270" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="660" y="400" width="72" height="270" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="696" y="545" fill="#14B8A6" font-size="22" font-weight="800" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">04</text>
+  <text x="756" y="448" fill="#0F172A" font-size="18" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">考核管控体系</text>
+  <text x="756" y="478" fill="#0F766E" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">从「柔性要求」到「刚性闭环」</text>
+  <rect x="756" y="492" width="40" height="2" fill="#0F766E"/>
+<text x="756" y="520" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="756" dy="0">· 制度化考核：精益改善指标全面纳入公司正式考核，对基地负责人</tspan>
+<tspan x="756" dy="16">与核心干部量化评价，避免形式主义。</tspan>
+</text><text x="756" y="567.6" fill="#64748B" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="756" dy="0">· 红黑榜：部门负责人作为第一责任人，公开红黑榜展示改善结果，</tspan>
+<tspan x="756" dy="16">奖惩清晰、闭环管理。</tspan>
 </text>
 </svg>

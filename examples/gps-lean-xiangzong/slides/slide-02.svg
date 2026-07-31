@@ -1,104 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0F2740"/>
-      <stop offset="100%" stop-color="#1B3A5F"/>
+    <pattern id="bp" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0F766E" stroke-width="0.4" opacity="0.07"/>
+    </pattern>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
     </linearGradient>
-    <filter id="sh" x="-4%" y="-4%" width="108%" height="116%">
-      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#1B3A5F" flood-opacity="0.08"/>
-    </filter>
   </defs>
-  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect width="1280" height="720" fill="#F1F5F9"/>
+  <rect width="1280" height="720" fill="url(#bp)"/>
 
-  <text x="56" y="42" fill="#1B3A5F" font-size="28" font-weight="800" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">筑基 →「势起」</text>
-  <rect x="56" y="52" width="64" height="4" rx="2" ry="2" fill="#E87A2E" stroke="none"/>
-  <text x="56" y="82" fill="#5D6D7E" font-size="13" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="56" dy="0">自 2025 年 9 月以来，GPS 精益体系已从「探索与单点整改」迈入「体系起势与机制落地」阶段。</tspan>
-<tspan x="56" dy="18">2026 年为关键推进年：精益作为「第二生产力」，以「453」框架启航精益转型，践行「真善美」价值主张。</tspan>
+  <rect x="0" y="0" width="1280" height="72" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="48" y="46" fill="#fff" font-size="26" font-weight="700" font-family="Merriweather, Source Han Serif SC, Noto Serif SC, Songti SC, serif" text-anchor="start">筑基 →「势起」</text>
+  <text x="1180" y="46" fill="#14B8A6" font-size="12" font-weight="600" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="end">02 / 06</text>
+  <text x="48" y="100" fill="#64748B" font-size="13" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="48" dy="0">自 2025 年 9 月以来，GPS 精益体系已从「探索与单点整改」迈入「体系起势与机制落地」阶段。</tspan>
+<tspan x="48" dy="18">2026 年为关键推进年：精益作为「第二生产力」，以「453」框架启航精益转型，践行「真善美」价值主张。</tspan>
 </text>
 
-  <text x="56" y="145" fill="#E87A2E" font-size="15" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">四级架构</text>
+  <text x="48" y="165" fill="#0F766E" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">四级架构</text>
+  <rect x="48" y="175" width="48" height="2" fill="#0F766E"/>
 
-  <rect x="56" y="160" width="290" height="100" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="56" y="160" width="290" height="34" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="56" y="182" width="290" height="12" fill="#1B3A5F"/>
-  <text x="201" y="182" fill="#fff" font-size="13" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">决策层 · 战略引领</text>
-  <text x="70" y="214" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="70" dy="0">确立精益战略，审批重大课题，</tspan>
-<tspan x="70" dy="16">提供核心资源与政策支持</tspan>
+  <rect x="48" y="190" width="290" height="105" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="48" y="190" width="290" height="6" rx="0" ry="0" fill="#0F766E" stroke="none"/>
+  <text x="62" y="225" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">决策层 · 战略引领</text>
+  <text x="62" y="250" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="62" dy="0">确立精益战略，审批重大课题，</tspan>
+<tspan x="62" dy="14">提供核心资源与政策支持</tspan>
 </text>
 
-  <rect x="361" y="160" width="290" height="100" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="361" y="160" width="290" height="34" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="361" y="182" width="290" height="12" fill="#1B3A5F"/>
-  <text x="506" y="182" fill="#fff" font-size="13" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">推进层 · 体系赋能</text>
-  <text x="375" y="214" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="375" dy="0">体系规划、方法导入、项目督导与专业</tspan>
-<tspan x="375" dy="16">人才培养</tspan>
+  <rect x="353" y="190" width="290" height="105" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="353" y="190" width="290" height="6" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="367" y="225" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">推进层 · 体系赋能</text>
+  <text x="367" y="250" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="367" dy="0">体系规划、方法导入、项目督导与专业</tspan>
+<tspan x="367" dy="14">人才培养</tspan>
 </text>
 
-  <rect x="666" y="160" width="290" height="100" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="666" y="160" width="290" height="34" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="666" y="182" width="290" height="12" fill="#1B3A5F"/>
-  <text x="811" y="182" fill="#fff" font-size="13" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">执行层 · 攻坚落地</text>
-  <text x="680" y="214" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="680" dy="0">基地一把手主责，目标分解与资源协同</tspan>
-<tspan x="680" dy="16">，确保课题出成果</tspan>
+  <rect x="658" y="190" width="290" height="105" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="658" y="190" width="290" height="6" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="672" y="225" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">执行层 · 攻坚落地</text>
+  <text x="672" y="250" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="672" dy="0">基地一把手主责，目标分解与资源协同</tspan>
+<tspan x="672" dy="14">，确保课题出成果</tspan>
 </text>
 
-  <rect x="971" y="160" width="290" height="100" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <rect x="971" y="160" width="290" height="34" rx="12" ry="12" fill="#1B3A5F" stroke="none"/>
-  <rect x="971" y="182" width="290" height="12" fill="#1B3A5F"/>
-  <text x="1116" y="182" fill="#fff" font-size="13" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle">落地层 · 现场改善</text>
-  <text x="985" y="214" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="985" dy="0">班组长带一线严守 SOP，参与现场</tspan>
-<tspan x="985" dy="16">改善提案</tspan>
-</text>
-  <text x="56" y="290" fill="#E87A2E" font-size="15" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">五大体系</text>
-
-  <rect x="56" y="305" width="230" height="78" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="72" y="335" fill="#1B3A5F" font-size="14" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">01 对标研学</text>
-  <text x="72" y="360" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">被动学习 → 主动对标</text>
-
-  <rect x="300" y="305" width="230" height="78" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="316" y="335" fill="#1B3A5F" font-size="14" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">02 标杆复制</text>
-  <text x="316" y="360" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">单点优势 → 全域标准化</text>
-
-  <rect x="544" y="305" width="230" height="78" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="560" y="335" fill="#1B3A5F" font-size="14" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">03 人才育成</text>
-  <text x="560" y="360" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">基础普及 → 精英赋能</text>
-
-  <rect x="788" y="305" width="230" height="78" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="804" y="335" fill="#1B3A5F" font-size="14" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">04 考核管控</text>
-  <text x="804" y="360" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">柔性要求 → 刚性闭环</text>
-
-  <rect x="1032" y="305" width="230" height="78" rx="12" ry="12" fill="#FFF4EB" stroke="#E87A2E" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="1048" y="335" fill="#1B3A5F" font-size="14" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">05 价值生产力</text>
-  <text x="1048" y="360" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">精益锚定核心课题</text>
-  <text x="56" y="415" fill="#E87A2E" font-size="15" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">三阶段路径（2026 下半年）</text>
-
-  <rect x="56" y="430" width="390" height="110" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="74" y="465" fill="#1B3A5F" font-size="15" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">7–8 月 · 筑基巩固期</text>
-  <text x="74" y="495" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="74" dy="0">补短板、定标准、全员培训，夯实现场基础管理规范</tspan>
-<tspan x="74" dy="16">化</tspan>
+  <rect x="963" y="190" width="290" height="105" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="963" y="190" width="290" height="6" rx="0" ry="0" fill="#0F172A" stroke="none"/>
+  <text x="977" y="225" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">落地层 · 现场改善</text>
+  <text x="977" y="250" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="977" dy="0">班组长带一线严守 SOP，参与现场</tspan>
+<tspan x="977" dy="14">改善提案</tspan>
 </text>
 
-  <rect x="461" y="430" width="390" height="110" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="479" y="465" fill="#1B3A5F" font-size="15" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">9–10 月 · 攻坚突破期</text>
-  <text x="479" y="495" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="479" dy="0">专项改善课题，解决核心经营痛点与瓶颈</tspan>
+  <text x="48" y="325" fill="#0F766E" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">五大体系</text>
+  <rect x="48" y="335" width="48" height="2" fill="#0F766E"/>
+
+  <rect x="48" y="350" width="228" height="72" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="62" y="378" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">01 对标研学</text>
+  <text x="62" y="402" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">被动学习 → 主动对标</text>
+
+  <rect x="290" y="350" width="228" height="72" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="304" y="378" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">02 标杆复制</text>
+  <text x="304" y="402" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">单点优势 → 全域标准化</text>
+
+  <rect x="532" y="350" width="228" height="72" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="546" y="378" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">03 人才育成</text>
+  <text x="546" y="402" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">基础普及 → 精英赋能</text>
+
+  <rect x="774" y="350" width="228" height="72" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="788" y="378" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">04 考核管控</text>
+  <text x="788" y="402" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">柔性要求 → 刚性闭环</text>
+
+  <rect x="1016" y="350" width="228" height="72" rx="4" ry="4" fill="#CCFBF1" stroke="#0F766E" stroke-width="1"/>
+  <text x="1030" y="378" fill="#0F172A" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">05 价值生产力</text>
+  <text x="1030" y="402" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">精益锚定核心课题</text>
+
+  <text x="48" y="450" fill="#0F766E" font-size="13" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">三阶段路径（2026 下半年）</text>
+  <rect x="48" y="460" width="48" height="2" fill="#0F766E"/>
+
+  <rect x="48" y="475" width="390" height="95" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="64" y="508" fill="#0F172A" font-size="14" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">7–8 月 · 筑基巩固期</text>
+  <text x="64" y="535" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="64" dy="0">补短板、定标准、全员培训，夯实现场基础管理规范</tspan>
+<tspan x="64" dy="14">化</tspan>
 </text>
 
-  <rect x="866" y="430" width="390" height="110" rx="12" ry="12" fill="#FFFFFF" stroke="#E8EEF2" stroke-width="1.5" filter="url(#sh)"/>
-  <text x="884" y="465" fill="#1B3A5F" font-size="15" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">11–12 月 · 价值兑现期</text>
-  <text x="884" y="495" fill="#5D6D7E" font-size="12" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
-<tspan x="884" dy="0">固化成果、建立长效机制，验证经济效益与效率提升</tspan>
+  <rect x="453" y="475" width="390" height="95" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="469" y="508" fill="#0F172A" font-size="14" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">9–10 月 · 攻坚突破期</text>
+  <text x="469" y="535" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="469" dy="0">专项改善课题，解决核心经营痛点与瓶颈</tspan>
 </text>
 
-  <rect x="56" y="560" width="1168" height="110" rx="14" ry="14" fill="#0F2740" stroke="none"/>
-  <text x="84" y="605" fill="#E87A2E" font-size="18" font-weight="700" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">453 框架 = 四级架构 × 五大体系 × 三阶段路径</text>
-  <text x="84" y="640" fill="#A8C5D4" font-size="14" font-weight="400" font-family="Source Han Sans SC, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">以体系起势驱动机制落地，打造支撑公司高质量发展的「第二生产力」</text>
+  <rect x="858" y="475" width="390" height="95" rx="4" ry="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="874" y="508" fill="#0F172A" font-size="14" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">11–12 月 · 价值兑现期</text>
+  <text x="874" y="535" fill="#64748B" font-size="11" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="874" dy="0">固化成果、建立长效机制，验证经济效益与效率提升</tspan>
+</text>
+
+  <rect x="48" y="595" width="1184" height="90" rx="4" ry="4" fill="#0F172A" stroke="none"/>
+  <text x="72" y="635" fill="#14B8A6" font-size="16" font-weight="700" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">453 框架 = 四级架构 × 五大体系 × 三阶段路径</text>
+  <text x="72" y="662" fill="#94A3B8" font-size="12" font-weight="400" font-family="Source Sans 3, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start">以体系起势驱动机制落地，打造支撑公司高质量发展的「第二生产力」</text>
 
 </svg>
