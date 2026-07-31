@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2A3F"/>
+      <stop offset="100%" stop-color="#143D58"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E07A2F"/>
+      <stop offset="100%" stop-color="#F0A05A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2A3F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#0B2A3F"/>
+
+  <rect width="1280" height="720" fill="url(#heroGrad)"/>
+  <circle cx="1100" cy="160" r="200" fill="#E07A2F" opacity="0.10"/>
+  <circle cx="180" cy="580" r="160" fill="#0D8A7A" opacity="0.12"/>
+
+  <text x="80" y="120" fill="#E07A2F" font-size="18" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">下一步</text>
+  <text x="80" y="190" fill="#fff" font-size="44" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">从「势起」到「势成」</text>
+  <text x="80" y="250" fill="#A8C5D4" font-size="18" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">以四级联动贯通组织，以五大体系固化机制，以三阶段兑现价值</text>
+
+  <rect x="80" y="310" width="340" height="160" rx="16" ry="16" fill="rgba(255,255,255,0.08)" stroke="none" opacity="1"/>
+  <text x="110" y="360" fill="#fff" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">统一标准</text>
+  <text x="110" y="400" fill="#A8C5D4" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">工具、模板、考核一把尺子</text>
+
+  <rect x="450" y="310" width="340" height="160" rx="16" ry="16" fill="rgba(255,255,255,0.08)" stroke="none" opacity="1"/>
+  <text x="480" y="360" fill="#fff" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">攻坚课题</text>
+  <text x="480" y="400" fill="#A8C5D4" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">硅损 · 切片 · 组件 · OEE · 数字化</text>
+
+  <rect x="820" y="310" width="340" height="160" rx="16" ry="16" fill="rgba(255,255,255,0.08)" stroke="none" opacity="1"/>
+  <text x="850" y="360" fill="#fff" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">长效闭环</text>
+  <text x="850" y="400" fill="#A8C5D4" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">真数据 · 善攻坚 · 美现场</text>
+
+  <text x="80" y="560" fill="#fff" font-size="22" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">请向总审阅指导</text>
+  <text x="80" y="600" fill="#7FA0B4" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">GPS 精益管理系统  ·  2026 H2</text>
+
+</svg>

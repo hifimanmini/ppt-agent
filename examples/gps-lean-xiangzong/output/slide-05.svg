@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2A3F"/>
+      <stop offset="100%" stop-color="#143D58"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E07A2F"/>
+      <stop offset="100%" stop-color="#F0A05A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2A3F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#F5F7FA"/>
+
+  <text x="60" y="52" fill="#0B2A3F" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">五大体系｜系统起势的主骨架</text>
+  <rect x="60" y="64" width="72" height="4" rx="2" ry="2" fill="#E07A2F" stroke="none" opacity="1"/>
+
+  <rect x="60" y="100" width="1160" height="96" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="100" width="100" height="96" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="140" y="100" width="20" height="96" fill="#0B2A3F"/>
+  <text x="110" y="156" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">01</text>
+  <text x="190" y="140" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">对标研学体系</text>
+  <text x="190" y="172" fill="#5A6A7A" font-size="15" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">被动学习 → 对标赶超  ·  三维对标找差距，月度闭环整改</text>
+
+  <rect x="60" y="210" width="1160" height="96" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="210" width="100" height="96" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="140" y="210" width="20" height="96" fill="#0B2A3F"/>
+  <text x="110" y="266" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">02</text>
+  <text x="190" y="250" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">标杆复制体系</text>
+  <text x="190" y="282" fill="#5A6A7A" font-size="15" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">单点标杆 → 全域标准化  ·  SOP 拆解复制，标杆深度升级</text>
+
+  <rect x="60" y="320" width="1160" height="96" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="320" width="100" height="96" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="140" y="320" width="20" height="96" fill="#0B2A3F"/>
+  <text x="110" y="376" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">03</text>
+  <text x="190" y="360" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">人才育成体系</text>
+  <text x="190" y="392" fill="#5A6A7A" font-size="15" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">基础普及 → 精英赋能  ·  三级梯队 + 利益深度绑定</text>
+
+  <rect x="60" y="430" width="1160" height="96" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="430" width="100" height="96" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="140" y="430" width="20" height="96" fill="#0B2A3F"/>
+  <text x="110" y="486" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">04</text>
+  <text x="190" y="470" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">考核管控体系</text>
+  <text x="190" y="502" fill="#5A6A7A" font-size="15" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">柔性要求 → 刚性闭环  ·  指标入考核，红黑榜闭环</text>
+
+  <rect x="60" y="540" width="1160" height="96" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="540" width="100" height="96" rx="14" ry="14" fill="#E07A2F" stroke="none" opacity="1"/>
+  <rect x="140" y="540" width="20" height="96" fill="#E07A2F"/>
+  <text x="110" y="596" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">05</text>
+  <text x="190" y="580" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">价值生产力体系</text>
+  <text x="190" y="612" fill="#5A6A7A" font-size="15" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">精益锚定核心课题  ·  拉晶/切片/组件/设备/数字化</text>
+
+</svg>

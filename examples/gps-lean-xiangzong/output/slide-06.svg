@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2A3F"/>
+      <stop offset="100%" stop-color="#143D58"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E07A2F"/>
+      <stop offset="100%" stop-color="#F0A05A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2A3F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#F5F7FA"/>
+
+  <text x="60" y="48" fill="#0B2A3F" font-size="26" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">五大体系详解｜01–04 管理支撑系统</text>
+  <rect x="60" y="60" width="72" height="4" rx="2" ry="2" fill="#E07A2F" stroke="none" opacity="1"/>
+
+  <rect x="60" y="90" width="570" height="270" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="90" width="570" height="70" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="60" y="140" width="570" height="20" fill="#0B2A3F"/>
+  <text x="88" y="134" fill="#fff" font-size="20" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">01 对标研学</text>
+  <text x="88" y="195" fill="#E07A2F" font-size="14" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">从「被动学习」到「对标赶超」</text>
+<text x="88" y="235" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="88" dy="0">三维对标：横向基地 + 纵向工序 + 制造标杆，识别绩效差距</tspan>
+</text><text x="88" y="305" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="88" dy="0">量化整改：能耗 / 良率 / OEE 等核心 KPI，月度差距清</tspan>
+<tspan x="88" dy="20">单与整改计划</tspan>
+</text>
+  <rect x="650" y="90" width="570" height="270" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="650" y="90" width="570" height="70" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="650" y="140" width="570" height="20" fill="#0B2A3F"/>
+  <text x="678" y="134" fill="#fff" font-size="20" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">02 标杆复制</text>
+  <text x="678" y="195" fill="#E07A2F" font-size="14" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">从「单点标杆」到「全域标准化」</text>
+<text x="678" y="235" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="678" dy="0">标准化拆解：标杆车间/产线经验沉淀为 SOP 与点检标准，</tspan>
+<tspan x="678" dy="20">跨线复制</tspan>
+</text><text x="678" y="305" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="678" dy="0">标杆升级：从基础 5S 走向提质增效、降本与零缺陷，打造行业标杆</tspan>
+</text>
+  <rect x="60" y="390" width="570" height="270" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="390" width="570" height="70" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="60" y="440" width="570" height="20" fill="#0B2A3F"/>
+  <text x="88" y="434" fill="#fff" font-size="20" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">03 人才育成</text>
+  <text x="88" y="495" fill="#E07A2F" font-size="14" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">从「基础普及」到「精英赋能」</text>
+<text x="88" y="535" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="88" dy="0">三级梯队：精益骨干（执行）+ 内训师（传播）+ 精益专班（决策）</tspan>
+</text><text x="88" y="605" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="88" dy="0">利益绑定：认证与晋升通道、绩效激励挂钩，形成「学会—会用—受益」</tspan>
+</text>
+  <rect x="650" y="390" width="570" height="270" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="650" y="390" width="570" height="70" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="650" y="440" width="570" height="20" fill="#0B2A3F"/>
+  <text x="678" y="434" fill="#fff" font-size="20" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">04 考核管控</text>
+  <text x="678" y="495" fill="#E07A2F" font-size="14" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">从「柔性要求」到「刚性闭环」</text>
+<text x="678" y="535" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="678" dy="0">制度化考核：精益指标纳入公司正式考核，基地与核心干部量化评价</tspan>
+</text><text x="678" y="605" fill="#5A6A7A" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="678" dy="0">红黑榜：部门负责人主责，公示改善结果，奖惩清晰、闭环管理</tspan>
+</text>
+</svg>

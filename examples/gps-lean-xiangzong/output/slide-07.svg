@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2A3F"/>
+      <stop offset="100%" stop-color="#143D58"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E07A2F"/>
+      <stop offset="100%" stop-color="#F0A05A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2A3F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#F5F7FA"/>
+
+  <text x="60" y="48" fill="#0B2A3F" font-size="24" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">05 价值生产力体系｜锚定核心课题、助力价值增长</text>
+  <rect x="60" y="60" width="72" height="4" rx="2" ry="2" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="60" y="98" fill="#5A6A7A" font-size="16" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">聚焦五大核心课题，突破生产瓶颈</text>
+
+  <rect x="60" y="120" width="380" height="430" rx="16" ry="16" fill="url(#heroGrad)" stroke="none" opacity="1"/>
+  <text x="90" y="180" fill="#E07A2F" font-size="16" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">第二生产力</text>
+  <text x="90" y="230" fill="#fff" font-size="32" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">管理 × 产能</text>
+  <text x="90" y="275" fill="#fff" font-size="32" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">双增长引擎</text>
+  <text x="90" y="340" fill="#A8C5D4" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="90" dy="0">推动精益改善转化为产能增量、良率增量、</tspan>
+<tspan x="90" dy="21">效益增量，支撑业务规模化与高质量发展。</tspan>
+</text>
+
+  <rect x="470" y="120" width="750" height="78" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="470" y="120" width="8" height="78" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="500" y="152" fill="#0B2A3F" font-size="18" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">01  拉晶硅损优化</text>
+  <text x="500" y="178" fill="#5A6A7A" font-size="13" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">厘清硅损价值链浪费点；降低切割与磨削余量；提升硅料利用率</text>
+
+  <rect x="470" y="206" width="750" height="78" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="470" y="206" width="8" height="78" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="500" y="238" fill="#0B2A3F" font-size="18" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">02  切片损耗管控</text>
+  <text x="500" y="264" fill="#5A6A7A" font-size="13" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">攻克断线、碎片难点；提升硅片切割良率与优品率</text>
+
+  <rect x="470" y="292" width="750" height="78" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="470" y="292" width="8" height="78" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="500" y="324" fill="#0B2A3F" font-size="18" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">03  组件质量攻坚</text>
+  <text x="500" y="350" fill="#5A6A7A" font-size="13" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">层压缺陷、隐裂、虚焊与碎片率管控；保障可靠性与寿命</text>
+
+  <rect x="470" y="378" width="750" height="78" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="470" y="378" width="8" height="78" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="500" y="410" fill="#0B2A3F" font-size="18" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">04  设备效能跃升</text>
+  <text x="500" y="436" fill="#5A6A7A" font-size="13" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">夯实 TPM 运行模式；提升 OEE；保障产线连续稳定运行</text>
+
+  <rect x="470" y="464" width="750" height="78" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="470" y="464" width="8" height="78" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="500" y="496" fill="#0B2A3F" font-size="18" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">05  精益数字化+</text>
+  <text x="500" y="522" fill="#5A6A7A" font-size="13" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">以标准化为基，贯通顶层数字化模型；整合 DMS / TPMS / QMS</text>
+
+  <rect x="60" y="570" width="1160" height="90" rx="14" ry="14" fill="#F3E6D8" stroke="#E07A2F" stroke-width="1.5" opacity="1"/>
+  <text x="90" y="610" fill="#0B2A3F" font-size="16" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">目标：实现管理与产能双增长，打造支撑公司高质量发展的「第二生产力」引擎</text>
+  <text x="90" y="640" fill="#E07A2F" font-size="14" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">产能增量  ·  良率增量  ·  效益增量</text>
+
+</svg>

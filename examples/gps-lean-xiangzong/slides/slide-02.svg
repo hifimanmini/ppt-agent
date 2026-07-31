@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2A3F"/>
+      <stop offset="100%" stop-color="#143D58"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E07A2F"/>
+      <stop offset="100%" stop-color="#F0A05A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2A3F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#F5F7FA"/>
+
+  <text x="60" y="58" fill="#0B2A3F" font-size="32" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">当前精益推进现存真实痛点</text>
+  <rect x="60" y="72" width="72" height="4" rx="2" ry="2" fill="#E07A2F" stroke="none" opacity="1"/>
+  
+  <rect x="60" y="110" width="370" height="200" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="110" width="6" height="200" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="84" y="146" fill="#E07A2F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">01</text>
+  <text x="84" y="178" fill="#0B2A3F" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">落地不均衡</text>
+  <text x="84" y="206" fill="#E07A2F" font-size="13" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">标杆与常态两极分化</text>
+  <text x="84" y="238" fill="#5A6A7A" font-size="13" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="84" dy="0">标杆线成果显著，多数产线仍停在表层 </tspan>
+<tspan x="84" dy="19">5S；深层次浪费与瓶颈未触及，「重展示、</tspan>
+<tspan x="84" dy="19">轻落地、难持续」。</tspan>
+</text>
+
+  <rect x="455" y="110" width="370" height="200" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="455" y="110" width="6" height="200" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="479" y="146" fill="#E07A2F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">02</text>
+  <text x="479" y="178" fill="#0B2A3F" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">改善偏单点</text>
+  <text x="479" y="206" fill="#E07A2F" font-size="13" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">系统性攻坚能力不足</text>
+  <text x="479" y="238" fill="#5A6A7A" font-size="13" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="479" dy="0">改善多为碎片化整改，对拉晶高能耗、</tspan>
+<tspan x="479" dy="19">切片断线损耗等核心痛点攻坚不够，</tspan>
+<tspan x="479" dy="19">难以拉动良率与成本主指标。</tspan>
+</text>
+
+  <rect x="850" y="110" width="370" height="200" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="850" y="110" width="6" height="200" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="874" y="146" fill="#E07A2F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">03</text>
+  <text x="874" y="178" fill="#0B2A3F" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">全员氛围不足</text>
+  <text x="874" y="206" fill="#E07A2F" font-size="13" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">自主改善意识薄弱</text>
+  <text x="874" y="238" fill="#5A6A7A" font-size="13" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="874" dy="0">推进仍靠管理推动与专班督导，一线多为「被</tspan>
+<tspan x="874" dy="19">动执行」，尚未形成「主动找浪费、</tspan>
+<tspan x="874" dy="19">主动提改善」。</tspan>
+</text>
+
+  <rect x="60" y="340" width="370" height="220" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="340" width="6" height="220" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="84" y="376" fill="#E07A2F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">04</text>
+  <text x="84" y="408" fill="#0B2A3F" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">机制落地不彻底</text>
+  <text x="84" y="436" fill="#E07A2F" font-size="13" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">考核未闭环</text>
+  <text x="84" y="468" fill="#5A6A7A" font-size="13" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="84" dy="0">精益与人才晋升、基地评价挂钩常流于形式，</tspan>
+<tspan x="84" dy="19">缺量化指标与奖惩，管理关注度不一、</tspan>
+<tspan x="84" dy="19">基层驱动力弱。</tspan>
+</text>
+
+  <rect x="455" y="340" width="370" height="220" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="455" y="340" width="6" height="220" rx="0" ry="0" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="479" y="376" fill="#E07A2F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">05</text>
+  <text x="479" y="408" fill="#0B2A3F" font-size="20" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">精益信息化缺失</text>
+  <text x="479" y="436" fill="#E07A2F" font-size="13" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">改善难沉淀</text>
+  <text x="479" y="468" fill="#5A6A7A" font-size="13" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="479" dy="0">改善经验难沉淀、难复制，数据与现场脱节，</tspan>
+<tspan x="479" dy="19">难以支撑从运动式活动走向常态化管理。</tspan>
+</text>
+
+  <rect x="850" y="340" width="370" height="220" rx="14" ry="14" fill="#0B2A3F" stroke="none" filter="url(#shadow)" opacity="1"/>
+  <text x="874" y="380" fill="#E07A2F" font-size="16" font-weight="700" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">关键判断</text>
+  <text x="874" y="420" fill="#E8F1F6" font-size="14" font-weight="400" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif">
+<tspan x="874" dy="0">精益本质是消除浪费与持续改善；需以闭环机制与数据沉淀</tspan>
+<tspan x="874" dy="21">，破除形式主义，回归价值创造。</tspan>
+</text>
+
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2A3F"/>
+      <stop offset="100%" stop-color="#143D58"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E07A2F"/>
+      <stop offset="100%" stop-color="#F0A05A"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0B2A3F" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#F5F7FA"/>
+
+  <text x="60" y="52" fill="#0B2A3F" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">四级联动架构｜权责清晰、上下贯通</text>
+  <rect x="60" y="64" width="72" height="4" rx="2" ry="2" fill="#E07A2F" stroke="none" opacity="1"/>
+  <text x="60" y="100" fill="#5A6A7A" font-size="15" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">总部决策 → 体系推进 → 基地执行 → 班组落地，杜绝工具零散、重复落地</text>
+
+  <rect x="60" y="130" width="1160" height="120" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="130" width="160" height="120" rx="14" ry="14" fill="#0B2A3F" stroke="none" opacity="1"/>
+  <rect x="180" y="130" width="40" height="120" fill="#0B2A3F"/>
+  <text x="140" y="182" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">01</text>
+  <text x="140" y="214" fill="#fff" font-size="16" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">决策层</text>
+  <text x="230" y="172" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">战略引领</text>
+<text x="230" y="202" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 确立公司精益战略方向与年度目标</text><text x="230" y="224" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 审批重大改善课题与跨基地资源投入</text><text x="230" y="246" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 提供核心政策支持与价值导向</text>
+  <rect x="60" y="265" width="1160" height="120" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="265" width="160" height="120" rx="14" ry="14" fill="#143D58" stroke="none" opacity="1"/>
+  <rect x="180" y="265" width="40" height="120" fill="#143D58"/>
+  <text x="140" y="317" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">02</text>
+  <text x="140" y="349" fill="#fff" font-size="16" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">推进层</text>
+  <text x="230" y="307" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">体系赋能</text>
+<text x="230" y="337" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 体系规划与方法论导入</text><text x="230" y="359" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 项目督导与过程赋能</text><text x="230" y="381" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 精益专业人才育成与认证</text>
+  <rect x="60" y="400" width="1160" height="120" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="400" width="160" height="120" rx="14" ry="14" fill="#0D8A7A" stroke="none" opacity="1"/>
+  <rect x="180" y="400" width="40" height="120" fill="#0D8A7A"/>
+  <text x="140" y="452" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">03</text>
+  <text x="140" y="484" fill="#fff" font-size="16" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">执行层</text>
+  <text x="230" y="442" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">攻坚落地</text>
+<text x="230" y="472" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 基地一把手为第一责任人</text><text x="230" y="494" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 目标四级分解、资源横向协同</text><text x="230" y="516" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 确保专项课题出成果、可复制</text>
+  <rect x="60" y="535" width="1160" height="120" rx="14" ry="14" fill="#FFFFFF" stroke="#D5DEE7" stroke-width="1.5" filter="url(#shadow)" opacity="1"/>
+  <rect x="60" y="535" width="160" height="120" rx="14" ry="14" fill="#2E8B57" stroke="none" opacity="1"/>
+  <rect x="180" y="535" width="40" height="120" fill="#2E8B57"/>
+  <text x="140" y="587" fill="#fff" font-size="28" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">04</text>
+  <text x="140" y="619" fill="#fff" font-size="16" font-weight="600" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="middle" opacity="1">落地层</text>
+  <text x="230" y="577" fill="#0B2A3F" font-size="22" font-weight="800" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">现场改善</text>
+<text x="230" y="607" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 班组长带领一线严守标准作业</text><text x="230" y="629" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 工位级浪费识别与提案改善</text><text x="230" y="651" fill="#5A6A7A" font-size="14" font-weight="500" font-family="DM Sans, PingFang SC, Microsoft YaHei, Noto Sans SC, sans-serif" text-anchor="start" opacity="1">· 5S/目视化/防错等基础动作落地</text>
+</svg>
